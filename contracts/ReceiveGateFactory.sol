@@ -25,9 +25,6 @@ contract ReceiveGateFactory is
 
     bytes32 public salt;
 
-    constructor() payable {
-        _disableInitializers();
-    }
 
     function initialize(IAuthority authority_, ITreasury treasury_)
         external

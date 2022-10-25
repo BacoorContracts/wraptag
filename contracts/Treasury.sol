@@ -33,11 +33,6 @@ contract Treasury is
 
     EnumerableSetUpgradeable.AddressSet private __payments;
 
-    /// @custom:oz-upgrades-unsafe-allow constructor
-    constructor() payable {
-        _disableInitializers();
-    }
-
     function initialize(IAuthority authority_) external initializer {
         /// @dev support native payment
         __addPayment(address(0));
