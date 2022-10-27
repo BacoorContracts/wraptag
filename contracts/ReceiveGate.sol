@@ -123,7 +123,7 @@ contract ReceiveGate is
     function depositERC721MultiWithCommand(
         uint256[] calldata tokenIds_,
         address[] calldata contracts_,
-        bytes calldata data_
+        bytes[] calldata data_
     ) external whenNotPaused {
         uint256 length = tokenIds_.length;
         address sender = _msgSender();
@@ -132,7 +132,7 @@ contract ReceiveGate is
                 sender,
                 address(this),
                 tokenIds_[i],
-                data_
+                data_[i]
             );
             unchecked {
                 ++i;
