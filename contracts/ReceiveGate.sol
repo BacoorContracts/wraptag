@@ -13,7 +13,6 @@ import "oz-custom/contracts/internal/MultiDelegatecall.sol";
 import "./internal/Base.sol";
 
 import "./interfaces/IReceiveGate.sol";
-import "oz-custom/contracts/utils/interfaces/IWNT.sol";
 import "oz-custom/contracts/oz/token/ERC721/IERC721.sol";
 
 import "oz-custom/contracts/libraries/Bytes32Address.sol";
@@ -30,31 +29,38 @@ contract ReceiveGate is
     using ERC165Checker for address;
     using BitMaps for BitMaps.BitMap;
 
-    IWNT public immutable wrappedNativeToken;
     BitMaps.BitMap private __isWhitelisted;
 
-    constructor(address vault_, IWNT wrappedNativeToken_, IAuthority authority_)
+    constructor(address vault_, IAuthority authority_)
         payable
         Base(authority_, 0)
         FundForwarder(vault_)
-    {
-        wrappedNativeToken = wrappedNativeToken_;
-    }
+    {}
 
     function kill() external onlyRole(Roles.FACTORY_ROLE) {
         selfdestruct(payable(vault));
     }
 
-    function whitelistAddress(address addr_) external {
+    function whitelistAddress(address addr_)
+        external
+        onlyRole(Roles.OPERATOR_ROLE)
+    {
         __isWhitelisted.set(addr_.fillLast96Bits());
     }
 
-    function depositNativeTokenWithCommand() external payable whenNotPaused {
-        IWNT wnt = wrappedNativeToken;
-        emit Received(address(wnt), _msgSender(), msg.value);
-        wnt.deposit{value: msg.value}();
-        (address target, bytes memory data) = __decodeData(msg.data);
-        __executeTx(target, data);
+    function depositNativeTokenWithCommand(
+        address contract_,
+        bytes4 fnSig_,
+        bytes calldata params_
+    ) external payable whenNotPaused {
+        if (!__isWhitelisted.get(contract_.fillLast96Bits()))
+            revert ReceiveGate__UnknownAddress(contract_);
+
+        __executeTx(
+            contract_,
+            fnSig_,
+            bytes.concat(params_, abi.encode(address(0), msg.value))
+        );
     }
 
     function depositERC20WithCommand(
@@ -64,10 +70,14 @@ contract ReceiveGate is
         uint8 v,
         bytes32 r,
         bytes32 s,
+        bytes4 fnSig_,
+        address contract_,
         bytes calldata data_
     ) external whenNotPaused {
         address user = _msgSender();
         if (block.timestamp > deadline_) revert ReceiveGate__Expired();
+        if (!__isWhitelisted.get(contract_.fillLast96Bits()))
+            revert ReceiveGate__UnknownAddress(contract_);
         token_.permit(user, address(this), value_, deadline_, v, r, s);
         _safeERC20TransferFrom(
             IERC20(address(token_)),
@@ -75,48 +85,78 @@ contract ReceiveGate is
             address(this),
             value_
         );
-        (address target, bytes memory data) = __decodeData(data_);
-        __executeTx(target, data);
+
+        __executeTx(
+            contract_,
+            fnSig_,
+            bytes.concat(data_, abi.encode(token_, value_))
+        );
     }
 
     function withdrawTo(address token_, address to_, uint256 value_) external {
-        if (token_.supportsInterface(type(IERC20).interfaceId)) {
-            IWNT wnt = wrappedNativeToken;
-            if (token_ == address(wnt)) {
-                wnt.withdraw(value_);
-                _safeNativeTransfer(to_, value_);
-            } else _safeERC20Transfer(IERC20(token_), to_, value_);
-        } else if (token_.supportsInterface(type(IERC721).interfaceId))
+        if (token_.supportsInterface(type(IERC20).interfaceId))
+            _safeERC20Transfer(IERC20(token_), to_, value_);
+        else if (token_.supportsInterface(type(IERC721).interfaceId))
             IERC721(token_).safeTransferFrom(address(this), to_, value_);
+        else if (token_ == address(0)) _safeNativeTransfer(to_, value_);
     }
 
-    function onERC721Received(
-        address token_,
-        address from_,
-        uint256 tokenId_,
-        bytes calldata data_
-    ) external override returns (bytes4) {
-        emit Received(token_, from_, tokenId_);
+    function onERC721Received(address, address, uint256, bytes calldata data_)
+        external
+        override
+        returns (bytes4)
+    {
+        (address target, bytes4 fnSig, bytes memory data) = __decodeData(data_);
 
-        (address target, bytes memory data) = __decodeData(data_);
-        __executeTx(target, data);
+        if (!__isWhitelisted.get(target.fillLast96Bits()))
+            revert ReceiveGate__UnknownAddress(target);
+
+        __executeTx(
+            target,
+            fnSig,
+            bytes.concat(data, abi.encode(_msgSender(), 0))
+        );
 
         return this.onERC721Received.selector;
+    }
+
+    function depositERC721MultiWithCommand(
+        uint256[] calldata tokenIds_,
+        address[] calldata contracts_,
+        bytes calldata data_
+    ) external whenNotPaused {
+        uint256 length = tokenIds_.length;
+        address sender = _msgSender();
+        for (uint256 i; i < length; ) {
+            IERC721(contracts_[i]).safeTransferFrom(
+                sender,
+                address(this),
+                tokenIds_[i],
+                data_
+            );
+            unchecked {
+                ++i;
+            }
+        }
     }
 
     function __decodeData(bytes calldata data_)
         private
         view
-        returns (address target, bytes memory callData)
+        returns (address target, bytes4 fnSig, bytes memory params)
     {
-        (target, callData) = abi.decode(data_, (address, bytes));
+        (target, fnSig, params) = abi.decode(data_, (address, bytes4, bytes));
 
         if (!__isWhitelisted.get(target.fillLast96Bits()))
             revert ReceiveGate__UnknownAddress(target);
     }
 
-    function __executeTx(address target_, bytes memory data_) private {
-        (bool ok, ) = target_.call(data_);
+    function __executeTx(
+        address target_,
+        bytes4 fnSignature_,
+        bytes memory params_
+    ) private {
+        (bool ok, ) = target_.call(abi.encodePacked(fnSignature_, params_));
         if (!ok) revert ReceiveGate__ExecutionFailed();
     }
 }

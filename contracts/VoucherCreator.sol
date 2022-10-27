@@ -71,10 +71,6 @@ contract VoucherCreator is
         _;
     }
 
-    constructor() payable {
-        _disableInitializers();
-    }
-
     function initialize(
         IReceiveGate receiveGate_,
         IAuthority authority_,
@@ -87,17 +83,20 @@ contract VoucherCreator is
 
         __updateTokens(tokens_, statuses_);
 
-        __MultiDelegatecall_init();
-        __Base_init(authority_, 0);
-        __FundForwarder_init(address(treasury_));
+        __MultiDelegatecall_init_unchained();
+
+        __Base_init_unchained(authority_, 0);
         __Signable_init(type(VoucherCreator).name, "1");
+        __FundForwarder_init_unchained(address(treasury_));
     }
 
     function toggleVerificationMode(uint256 mode_)
         external
         onlyRole(Roles.OPERATOR_ROLE)
     {
-        verificationModeToggler = mode_;
+        assembly {
+            sstore(verificationModeToggler.slot, mode_)
+        }
     }
 
     function updateTokens(address[] calldata tokens_, bool[] calldata statuses_)
@@ -109,33 +108,37 @@ contract VoucherCreator is
     }
 
     function requestVoucherCreation(
-        address from_,
-        address token_,
+        uint8 amountEach_,
         uint64 start_,
         uint64 end_,
-        uint256 value_,
-        bytes32 root_
-    ) external whenNotPaused onlyRole(Roles.PROXY_ROLE) {
+        uint96 value_,
+        bytes32 root_,
+        address token_,
+        uint256 data_
+    ) external onlyRole(Roles.PROXY_ROLE) {
+        if (start_ > end_) revert VoucherCreator__InvalidArguments();
+
         if (!__supportedTokens.get(token_.fillLast96Bits()))
             revert VoucherCreator__UnsupportedToken();
 
-        if (token_.supportsInterface(type(IERC20Upgradeable).interfaceId)) {
-            if (IERC20Upgradeable(token_).balanceOf(_msgSender()) < value_)
-                revert VoucherCreator__InvalidArguments();
-        } else if (
-            token_.supportsInterface(type(IERC721Upgradeable).interfaceId)
+        if (
+            token_ == address(0) ||
+            token_.supportsInterface(type(IERC20Upgradeable).interfaceId)
         )
-            if (IERC721Upgradeable(token_).ownerOf(value_) != _msgSender())
+            if (data_ < value_ * amountEach_)
                 revert VoucherCreator__InvalidArguments();
 
-        if (start_ > end_) revert VoucherCreator__InvalidArguments();
+        __vouchers[root_] = Voucher({
+            token: token_,
+            start: start_,
+            end: end_,
+            value: value_
+        });
 
-        __vouchers[root_] = Voucher(token_, start_, end_, value_);
-
-        emit VoucherCreated(from_, token_, value_, start_, end_);
+        emit VoucherCreated(token_, value_, start_, end_);
     }
 
-    function batchProcess(bytes[] calldata data_) external whenNotPaused {
+    function batchProcess(bytes[] calldata data_) external {
         _multiDelegatecall(data_);
     }
 
@@ -145,7 +148,12 @@ contract VoucherCreator is
         whenUseCommitReveal
     {
         address user = _msgSender();
-        __commitments[user] = commitment_;
+
+        assembly {
+            mstore(0x00, user)
+            mstore(0x20, __commitments.slot)
+            sstore(keccak256(0x00, 64), commitment_)
+        }
 
         emit Commited(user, commitment_);
     }
@@ -161,6 +169,8 @@ contract VoucherCreator is
         if (keccak256(abi.encode(leaf_)) != __commitments[user])
             revert VoucherCreator__InvalidReveal();
 
+        delete __commitments[user];
+
         __processRedeem(user, root_, leaf_, proof_);
     }
 
@@ -172,11 +182,9 @@ contract VoucherCreator is
         address user = _msgSender();
         __checkUser(user);
 
-        uint256 key = user.fillFirst96Bits();
-
         assembly {
-            leaf_ := xor(key, leaf_)
-            root_ := xor(key, root_)
+            leaf_ := xor(shl(96, user), leaf_)
+            root_ := xor(shl(96, user), root_)
         }
 
         if (__usedLeafs.get(uint256(leaf_)))

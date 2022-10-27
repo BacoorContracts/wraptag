@@ -1,0 +1,644 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "Create2__DeploymentFailed",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Create2__InsufficientBalance",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Create2__ZeroLengthByteCode",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "instance",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "salt",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "bytecodeHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "factory",
+          "type": "string"
+        }
+      ],
+      "name": "Deployed",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "salt_",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "bytecode_",
+          "type": "bytes"
+        }
+      ],
+      "name": "deploy",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "salt_",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "bytecodeHash_",
+          "type": "bytes32"
+        }
+      ],
+      "name": "instanceOf",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "instance",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "isDeployed",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b5061042a806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c806366cfa0571461003b578063edcd56ed14610050575b600080fd5b61004e61004936600461030f565b610093565b005b61006361005e36600461038f565b6100da565b6040805173ffffffffffffffffffffffffffffffffffffffff909316835290151560208301520160405180910390f35b6100d4848484848080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201919091525061018692505050565b50505050565b6000806101638484604080517fff000000000000000000000000000000000000000000000000000000000000006020808301919091523060601b7fffffffffffffffffffffffffffffffffffffffff0000000000000000000000001660218301526035820194909452605580820193909352815180820390930183526075019052805191012090565b9473ffffffffffffffffffffffffffffffffffffffff86163b1515945092505050565b6000610193848484610237565b90508073ffffffffffffffffffffffffffffffffffffffff163f838273ffffffffffffffffffffffffffffffffffffffff167f82471448afe2356524b15e64e9baaa819fba9008481ce17e1c78c3bf87fc22b560405180604001604052600f8152806020017f437265617465324465706c6f796572000000000000000000000000000000000081525060405161022991906103b1565b60405180910390a450505050565b60008084471015610274576040517f99be5c9500000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b82516000036102af576040517f0233950600000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b8383516020850187f5905073ffffffffffffffffffffffffffffffffffffffff8116610307576040517f4294884500000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b949350505050565b6000806000806060858703121561032557600080fd5b8435935060208501359250604085013567ffffffffffffffff8082111561034b57600080fd5b818701915087601f83011261035f57600080fd5b81358181111561036e57600080fd5b88602082850101111561038057600080fd5b95989497505060200194505050565b600080604083850312156103a257600080fd5b50508035926020909101359150565b600060208083528351808285015260005b818110156103de578581018301518582016040015282016103c2565b5060006040828601015260407fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f830116850101925050509291505056fea164736f6c6343000811000a",
+    "sourceMap": "200:222:1:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c806366cfa0571461003b578063edcd56ed14610050575b600080fd5b61004e61004936600461030f565b610093565b005b61006361005e36600461038f565b6100da565b6040805173ffffffffffffffffffffffffffffffffffffffff909316835290151560208301520160405180910390f35b6100d4848484848080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201919091525061018692505050565b50505050565b6000806101638484604080517fff000000000000000000000000000000000000000000000000000000000000006020808301919091523060601b7fffffffffffffffffffffffffffffffffffffffff0000000000000000000000001660218301526035820194909452605580820193909352815180820390930183526075019052805191012090565b9473ffffffffffffffffffffffffffffffffffffffff86163b1515945092505050565b6000610193848484610237565b90508073ffffffffffffffffffffffffffffffffffffffff163f838273ffffffffffffffffffffffffffffffffffffffff167f82471448afe2356524b15e64e9baaa819fba9008481ce17e1c78c3bf87fc22b560405180604001604052600f8152806020017f437265617465324465706c6f796572000000000000000000000000000000000081525060405161022991906103b1565b60405180910390a450505050565b60008084471015610274576040517f99be5c9500000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b82516000036102af576040517f0233950600000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b8383516020850187f5905073ffffffffffffffffffffffffffffffffffffffff8116610307576040517f4294884500000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b949350505050565b6000806000806060858703121561032557600080fd5b8435935060208501359250604085013567ffffffffffffffff8082111561034b57600080fd5b818701915087601f83011261035f57600080fd5b81358181111561036e57600080fd5b88602082850101111561038057600080fd5b95989497505060200194505050565b600080604083850312156103a257600080fd5b50508035926020909101359150565b600060208083528351808285015260005b818110156103de578581018301518582016040015282016103c2565b5060006040828601015260407fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f830116850101925050509291505056fea164736f6c6343000811000a",
+    "sourceMap": "200:222:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;274:146;;;;;;:::i;:::-;;:::i;:::-;;517:264:27;;;;;;:::i;:::-;;:::i;:::-;;;;1197:42:71;1185:55;;;1167:74;;1284:14;;1277:22;1272:2;1257:18;;1250:50;1140:18;517:264:27;;;;;;;274:146:1;379:34;387:7;396:5;403:9;;379:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;379:7:1;;-1:-1:-1;;;379:34:1:i;:::-;274:146;;;;:::o;517:264:27:-;622:16;640:15;682:44;705:5;712:13;2590:60:65;;;2607:12;2590:60;;;;2134:92:71;;;;2140:4:65;2263:2:71;2259:15;2276:66;2255:88;2242:11;;;2235:109;2360:12;;;2353:28;;;;2397:12;;;;2390:28;;;;2590:60:65;;;;;;;;;;2434:12:71;;2590:60:65;;2567:93;;;;;;1960:193;682:44:27;671:55;749:20;;;;:25;;;-1:-1:-1;517:264:27;-1:-1:-1;;;517:264:27:o;787:344::-;918:16;937:41;952:7;961:5;968:9;937:14;:41::i;:::-;918:60;;1057:8;:17;;;1038:5;1016:8;994:130;;;1088:26;;;;;;;;;;;;;;;;;994:130;;;;;;:::i;:::-;;;;;;;;908:223;787:344;;;:::o;1193:563:65:-;1310:7;1329:12;1379:6;1355:21;:30;1351:85;;;1406:30;;;;;;;;;;;;;;1351:85;1450:8;:15;1469:1;1450:20;1446:62;;1479:29;;;;;;;;;;;;;;1446:62;1646:4;1635:8;1629:15;1622:4;1612:8;1608:19;1600:6;1592:59;1584:67;-1:-1:-1;1674:18:65;;;1670:58;;1701:27;;;;;;;;;;;;;;1670:58;1745:4;1193:563;-1:-1:-1;;;;1193:563:65:o;14:727:71:-;102:6;110;118;126;179:2;167:9;158:7;154:23;150:32;147:52;;;195:1;192;185:12;147:52;231:9;218:23;208:33;;288:2;277:9;273:18;260:32;250:42;;343:2;332:9;328:18;315:32;366:18;407:2;399:6;396:14;393:34;;;423:1;420;413:12;393:34;461:6;450:9;446:22;436:32;;506:7;499:4;495:2;491:13;487:27;477:55;;528:1;525;518:12;477:55;568:2;555:16;594:2;586:6;583:14;580:34;;;610:1;607;600:12;580:34;655:7;650:2;641:6;637:2;633:15;629:24;626:37;623:57;;;676:1;673;666:12;623:57;14:727;;;;-1:-1:-1;;707:2:71;699:11;;-1:-1:-1;;;14:727:71:o;746:248::-;814:6;822;875:2;863:9;854:7;850:23;846:32;843:52;;;891:1;888;881:12;843:52;-1:-1:-1;;914:23:71;;;984:2;969:18;;;956:32;;-1:-1:-1;746:248:71:o;1311:607::-;1423:4;1452:2;1481;1470:9;1463:21;1513:6;1507:13;1556:6;1551:2;1540:9;1536:18;1529:34;1581:1;1591:140;1605:6;1602:1;1599:13;1591:140;;;1700:14;;;1696:23;;1690:30;1666:17;;;1685:2;1662:26;1655:66;1620:10;;1591:140;;;1595:3;1780:1;1775:2;1766:6;1755:9;1751:22;1747:31;1740:42;1909:2;1839:66;1834:2;1826:6;1822:15;1818:88;1807:9;1803:104;1799:113;1791:121;;;;1311:607;;;;:::o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "deploy(uint256,bytes32,bytes)": "66cfa057",
+    "instanceOf(bytes32,bytes32)": "edcd56ed"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"Create2__DeploymentFailed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"Create2__InsufficientBalance\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"Create2__ZeroLengthByteCode\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"instance\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"salt\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"bytecodeHash\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"factory\",\"type\":\"string\"}],\"name\":\"Deployed\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount_\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"salt_\",\"type\":\"bytes32\"},{\"internalType\":\"bytes\",\"name\":\"bytecode_\",\"type\":\"bytes\"}],\"name\":\"deploy\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"salt_\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"bytecodeHash_\",\"type\":\"bytes32\"}],\"name\":\"instanceOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"instance\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"isDeployed\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/MultichainDeployer.sol\":\"MultichainDeployer\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":1000000},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":oz-custom/=node_modules/oz-custom/\"]},\"sources\":{\"contracts/MultichainDeployer.sol\":{\"keccak256\":\"0xb2d0d1f40c350c84d5e7ce01dba0d22ec9df7cfee576d66d8603fb8ab1468809\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://244eaac165c849e3416ea924847c53f0b9cf0e2ad9586e4254c3f6dea3bcb9ae\",\"dweb:/ipfs/QmXP7rbeRjoyjSAjpqAYke2zcc6Mn25Ft5AEmDrKb2khrE\"]},\"contracts/interfaces/IMultichainDeployer.sol\":{\"keccak256\":\"0x7634bc077f31b849155d3e3f5a060ba067aaacf2e8d19e94636119f009787ba9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://80e25d8c5996bfb8c9cb51361ed6724912f3c1fe80baf2cd7690bd0bd3eb443c\",\"dweb:/ipfs/QmcT5AzNa6P22gM2AQpY4N9t6NEAHeZWpzkGHn3zQH4Y5a\"]},\"node_modules/oz-custom/contracts/internal/DeterministicDeployer.sol\":{\"keccak256\":\"0x8d5633e2bb6a0f754ae060c9adc149d8740d8949086bfca99815c2e9f6b75d69\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9166af80a36cbda178d58fa8b18b2308f51f5235da0a9be50a660665141f0653\",\"dweb:/ipfs/QmZ3wgjjUkdY5jL1GvhVH9RKUrj1SZ1DU2M6a4Ya3MJVDe\"]},\"node_modules/oz-custom/contracts/libraries/Bytes32Address.sol\":{\"keccak256\":\"0x922291d1536c966dfc4f061135ed923aa024b30dc2f1745dd06f0d0f605fea33\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://39a03e29d32d65cda5a3d188b52937d839357e67009e3d8b60388fe8633bc44f\",\"dweb:/ipfs/QmUsQ5dvRzn6jM87iFhNQmHjonp1V1HLSvHusZ4HSi4s5G\"]},\"node_modules/oz-custom/contracts/libraries/Create3.sol\":{\"keccak256\":\"0x16ceecbb22c446cb9ba0749280a1a0cf7449e5d39b5826d7c0db751f77c4dadf\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://9586ced689b0b91daeb0b79274e86950ceeb680d307383a1d1f72e88f543991a\",\"dweb:/ipfs/QmUSUMuNDqgbjKmxKd1FsXKrnbNqHVTDUd6NefRujqZRWX\"]},\"node_modules/oz-custom/contracts/oz/utils/Create2.sol\":{\"keccak256\":\"0x2cc3761bc38bff25ecd2a0d9e9083a3bad801070bf08114394e989399ee1a26f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f755093521ab1533d2c1d04f9a0e63fa47f556590f39c20bef75c7fdc589bbe4\",\"dweb:/ipfs/QmRr564LeDGmDV6GL7rTPTnzoHL5F5SFyXYHPV2zoeSHfb\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "Create2__DeploymentFailed"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "Create2__InsufficientBalance"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "Create2__ZeroLengthByteCode"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "instance",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "bytes32",
+              "name": "salt",
+              "type": "bytes32",
+              "indexed": true
+            },
+            {
+              "internalType": "bytes32",
+              "name": "bytecodeHash",
+              "type": "bytes32",
+              "indexed": true
+            },
+            {
+              "internalType": "string",
+              "name": "factory",
+              "type": "string",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Deployed",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "amount_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "salt_",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes",
+              "name": "bytecode_",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "deploy"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "salt_",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "bytecodeHash_",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "instanceOf",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "instance",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "isDeployed",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=node_modules/hardhat/",
+        ":oz-custom/=node_modules/oz-custom/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 1000000
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "contracts/MultichainDeployer.sol": "MultichainDeployer"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/MultichainDeployer.sol": {
+        "keccak256": "0xb2d0d1f40c350c84d5e7ce01dba0d22ec9df7cfee576d66d8603fb8ab1468809",
+        "urls": [
+          "bzz-raw://244eaac165c849e3416ea924847c53f0b9cf0e2ad9586e4254c3f6dea3bcb9ae",
+          "dweb:/ipfs/QmXP7rbeRjoyjSAjpqAYke2zcc6Mn25Ft5AEmDrKb2khrE"
+        ],
+        "license": "MIT"
+      },
+      "contracts/interfaces/IMultichainDeployer.sol": {
+        "keccak256": "0x7634bc077f31b849155d3e3f5a060ba067aaacf2e8d19e94636119f009787ba9",
+        "urls": [
+          "bzz-raw://80e25d8c5996bfb8c9cb51361ed6724912f3c1fe80baf2cd7690bd0bd3eb443c",
+          "dweb:/ipfs/QmcT5AzNa6P22gM2AQpY4N9t6NEAHeZWpzkGHn3zQH4Y5a"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/internal/DeterministicDeployer.sol": {
+        "keccak256": "0x8d5633e2bb6a0f754ae060c9adc149d8740d8949086bfca99815c2e9f6b75d69",
+        "urls": [
+          "bzz-raw://9166af80a36cbda178d58fa8b18b2308f51f5235da0a9be50a660665141f0653",
+          "dweb:/ipfs/QmZ3wgjjUkdY5jL1GvhVH9RKUrj1SZ1DU2M6a4Ya3MJVDe"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/libraries/Bytes32Address.sol": {
+        "keccak256": "0x922291d1536c966dfc4f061135ed923aa024b30dc2f1745dd06f0d0f605fea33",
+        "urls": [
+          "bzz-raw://39a03e29d32d65cda5a3d188b52937d839357e67009e3d8b60388fe8633bc44f",
+          "dweb:/ipfs/QmUsQ5dvRzn6jM87iFhNQmHjonp1V1HLSvHusZ4HSi4s5G"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/libraries/Create3.sol": {
+        "keccak256": "0x16ceecbb22c446cb9ba0749280a1a0cf7449e5d39b5826d7c0db751f77c4dadf",
+        "urls": [
+          "bzz-raw://9586ced689b0b91daeb0b79274e86950ceeb680d307383a1d1f72e88f543991a",
+          "dweb:/ipfs/QmUSUMuNDqgbjKmxKd1FsXKrnbNqHVTDUd6NefRujqZRWX"
+        ],
+        "license": "AGPL-3.0-only"
+      },
+      "node_modules/oz-custom/contracts/oz/utils/Create2.sol": {
+        "keccak256": "0x2cc3761bc38bff25ecd2a0d9e9083a3bad801070bf08114394e989399ee1a26f",
+        "urls": [
+          "bzz-raw://f755093521ab1533d2c1d04f9a0e63fa47f556590f39c20bef75c7fdc589bbe4",
+          "dweb:/ipfs/QmRr564LeDGmDV6GL7rTPTnzoHL5F5SFyXYHPV2zoeSHfb"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/MultichainDeployer.sol",
+    "id": 252,
+    "exportedSymbols": {
+      "Create2Deployer": [
+        4458
+      ],
+      "IMultichainDeployer": [
+        1893
+      ],
+      "MultichainDeployer": [
+        251
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:391:1",
+    "nodes": [
+      {
+        "id": 227,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:1",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 229,
+        "nodeType": "ImportDirective",
+        "src": "57:93:1",
+        "nodes": [],
+        "absolutePath": "node_modules/oz-custom/contracts/internal/DeterministicDeployer.sol",
+        "file": "oz-custom/contracts/internal/DeterministicDeployer.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 252,
+        "sourceUnit": 4518,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 228,
+              "name": "Create2Deployer",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4458,
+              "src": "70:15:1",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 230,
+        "nodeType": "ImportDirective",
+        "src": "152:46:1",
+        "nodes": [],
+        "absolutePath": "contracts/interfaces/IMultichainDeployer.sol",
+        "file": "./interfaces/IMultichainDeployer.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 252,
+        "sourceUnit": 1894,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 251,
+        "nodeType": "ContractDefinition",
+        "src": "200:222:1",
+        "nodes": [
+          {
+            "id": 250,
+            "nodeType": "FunctionDefinition",
+            "src": "274:146:1",
+            "nodes": [],
+            "body": {
+              "id": 249,
+              "nodeType": "Block",
+              "src": "369:51:1",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 244,
+                        "name": "amount_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 236,
+                        "src": "387:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 245,
+                        "name": "salt_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 238,
+                        "src": "396:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "id": 246,
+                        "name": "bytecode_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 240,
+                        "src": "403:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_calldata_ptr",
+                          "typeString": "bytes calldata"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_calldata_ptr",
+                          "typeString": "bytes calldata"
+                        }
+                      ],
+                      "id": 243,
+                      "name": "_deploy",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        4457
+                      ],
+                      "referencedDeclaration": 4457,
+                      "src": "379:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_bytes32_$_t_bytes_memory_ptr_$returns$__$",
+                        "typeString": "function (uint256,bytes32,bytes memory)"
+                      }
+                    },
+                    "id": 247,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "379:34:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 248,
+                  "nodeType": "ExpressionStatement",
+                  "src": "379:34:1"
+                }
+              ]
+            },
+            "baseFunctions": [
+              1892
+            ],
+            "functionSelector": "66cfa057",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deploy",
+            "nameLocation": "283:6:1",
+            "parameters": {
+              "id": 241,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 236,
+                  "mutability": "mutable",
+                  "name": "amount_",
+                  "nameLocation": "298:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 250,
+                  "src": "290:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 235,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "290:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 238,
+                  "mutability": "mutable",
+                  "name": "salt_",
+                  "nameLocation": "315:5:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 250,
+                  "src": "307:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 237,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "307:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 240,
+                  "mutability": "mutable",
+                  "name": "bytecode_",
+                  "nameLocation": "337:9:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 250,
+                  "src": "322:24:1",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 239,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "322:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "289:58:1"
+            },
+            "returnParameters": {
+              "id": 242,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "369:0:1"
+            },
+            "scope": 251,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 231,
+              "name": "Create2Deployer",
+              "nameLocations": [
+                "231:15:1"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 4458,
+              "src": "231:15:1"
+            },
+            "id": 232,
+            "nodeType": "InheritanceSpecifier",
+            "src": "231:15:1"
+          },
+          {
+            "baseName": {
+              "id": 233,
+              "name": "IMultichainDeployer",
+              "nameLocations": [
+                "248:19:1"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 1893,
+              "src": "248:19:1"
+            },
+            "id": 234,
+            "nodeType": "InheritanceSpecifier",
+            "src": "248:19:1"
+          }
+        ],
+        "canonicalName": "MultichainDeployer",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          251,
+          1893,
+          4458,
+          4396
+        ],
+        "name": "MultichainDeployer",
+        "nameLocation": "209:18:1",
+        "scope": 252,
+        "usedErrors": [
+          9839,
+          9841,
+          9843
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 1
+}

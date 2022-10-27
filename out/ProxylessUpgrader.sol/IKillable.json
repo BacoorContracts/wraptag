@@ -1,0 +1,1144 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "kill",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "kill()": "41c0e1b5"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"kill\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/oz-custom/contracts/internal-upgradeable/ProxylessUpgrader.sol\":\"IKillable\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":1000000},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":oz-custom/=node_modules/oz-custom/\"]},\"sources\":{\"node_modules/oz-custom/contracts/internal-upgradeable/ProxylessUpgrader.sol\":{\"keccak256\":\"0x3231ae3c0ad74b2507b4036fc573301700467899a1ad22a317ea4d207b1bc717\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://71626153779384df32e1106a6de5a037874c83652981dbdaa5c081c518e15616\",\"dweb:/ipfs/QmXMijEos5t7ruouG9BqGkuaWTB93TXYaLfMYMbrn97iyG\"]},\"node_modules/oz-custom/contracts/internal/DeterministicDeployer.sol\":{\"keccak256\":\"0x8d5633e2bb6a0f754ae060c9adc149d8740d8949086bfca99815c2e9f6b75d69\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9166af80a36cbda178d58fa8b18b2308f51f5235da0a9be50a660665141f0653\",\"dweb:/ipfs/QmZ3wgjjUkdY5jL1GvhVH9RKUrj1SZ1DU2M6a4Ya3MJVDe\"]},\"node_modules/oz-custom/contracts/libraries/Bytes32Address.sol\":{\"keccak256\":\"0x922291d1536c966dfc4f061135ed923aa024b30dc2f1745dd06f0d0f605fea33\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://39a03e29d32d65cda5a3d188b52937d839357e67009e3d8b60388fe8633bc44f\",\"dweb:/ipfs/QmUsQ5dvRzn6jM87iFhNQmHjonp1V1HLSvHusZ4HSi4s5G\"]},\"node_modules/oz-custom/contracts/libraries/Create3.sol\":{\"keccak256\":\"0x16ceecbb22c446cb9ba0749280a1a0cf7449e5d39b5826d7c0db751f77c4dadf\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://9586ced689b0b91daeb0b79274e86950ceeb680d307383a1d1f72e88f543991a\",\"dweb:/ipfs/QmUSUMuNDqgbjKmxKd1FsXKrnbNqHVTDUd6NefRujqZRWX\"]},\"node_modules/oz-custom/contracts/libraries/ProxyCreator.sol\":{\"keccak256\":\"0xe9a48f677dfa1020dbf2dcd58b457a2f8de8c0383baf7efbd714698bddb6dec8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://354e65306fdd73de6763ee483096afce9bb3b183edfa44babfecc2a81c0d8fe8\",\"dweb:/ipfs/QmRrbtXJV8m319xYvJ8TTvZeUAC12vnxikZEiRdf8ZAiZy\"]},\"node_modules/oz-custom/contracts/oz-upgradeable/proxy/utils/Initializable.sol\":{\"keccak256\":\"0x71cf7f66d423ff53373959a935a376cda8957f8e1c899f7e80b93db20936b33e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://49cfc69d5690ca021f87741ab592207a2c7d0d42165e8ef7c877b7e8ed1ccb02\",\"dweb:/ipfs/QmNT4XAgqg3ey6ApMwiRsrJXDp3k1ndVGw2Dyv6wuc9gMv\"]},\"node_modules/oz-custom/contracts/oz-upgradeable/utils/ContextUpgradeable.sol\":{\"keccak256\":\"0x8d195f4fb42b15464ab01ae3fb99b6f5c88526ae9b4187f0774741ad0dc6d3d2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3a2c223fb1f1d38983f2c58d410032d20220b1050c1effbbfcac71e73da3e622\",\"dweb:/ipfs/QmQ1da9VzJZc6bkN7hNUeMUm3JxNxDBvSTDkqSkrfAZZp2\"]},\"node_modules/oz-custom/contracts/oz/utils/Create2.sol\":{\"keccak256\":\"0x2cc3761bc38bff25ecd2a0d9e9083a3bad801070bf08114394e989399ee1a26f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f755093521ab1533d2c1d04f9a0e63fa47f556590f39c20bef75c7fdc589bbe4\",\"dweb:/ipfs/QmRr564LeDGmDV6GL7rTPTnzoHL5F5SFyXYHPV2zoeSHfb\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "kill"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=node_modules/hardhat/",
+        ":oz-custom/=node_modules/oz-custom/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 1000000
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "node_modules/oz-custom/contracts/internal-upgradeable/ProxylessUpgrader.sol": "IKillable"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/oz-custom/contracts/internal-upgradeable/ProxylessUpgrader.sol": {
+        "keccak256": "0x3231ae3c0ad74b2507b4036fc573301700467899a1ad22a317ea4d207b1bc717",
+        "urls": [
+          "bzz-raw://71626153779384df32e1106a6de5a037874c83652981dbdaa5c081c518e15616",
+          "dweb:/ipfs/QmXMijEos5t7ruouG9BqGkuaWTB93TXYaLfMYMbrn97iyG"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/internal/DeterministicDeployer.sol": {
+        "keccak256": "0x8d5633e2bb6a0f754ae060c9adc149d8740d8949086bfca99815c2e9f6b75d69",
+        "urls": [
+          "bzz-raw://9166af80a36cbda178d58fa8b18b2308f51f5235da0a9be50a660665141f0653",
+          "dweb:/ipfs/QmZ3wgjjUkdY5jL1GvhVH9RKUrj1SZ1DU2M6a4Ya3MJVDe"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/libraries/Bytes32Address.sol": {
+        "keccak256": "0x922291d1536c966dfc4f061135ed923aa024b30dc2f1745dd06f0d0f605fea33",
+        "urls": [
+          "bzz-raw://39a03e29d32d65cda5a3d188b52937d839357e67009e3d8b60388fe8633bc44f",
+          "dweb:/ipfs/QmUsQ5dvRzn6jM87iFhNQmHjonp1V1HLSvHusZ4HSi4s5G"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/libraries/Create3.sol": {
+        "keccak256": "0x16ceecbb22c446cb9ba0749280a1a0cf7449e5d39b5826d7c0db751f77c4dadf",
+        "urls": [
+          "bzz-raw://9586ced689b0b91daeb0b79274e86950ceeb680d307383a1d1f72e88f543991a",
+          "dweb:/ipfs/QmUSUMuNDqgbjKmxKd1FsXKrnbNqHVTDUd6NefRujqZRWX"
+        ],
+        "license": "AGPL-3.0-only"
+      },
+      "node_modules/oz-custom/contracts/libraries/ProxyCreator.sol": {
+        "keccak256": "0xe9a48f677dfa1020dbf2dcd58b457a2f8de8c0383baf7efbd714698bddb6dec8",
+        "urls": [
+          "bzz-raw://354e65306fdd73de6763ee483096afce9bb3b183edfa44babfecc2a81c0d8fe8",
+          "dweb:/ipfs/QmRrbtXJV8m319xYvJ8TTvZeUAC12vnxikZEiRdf8ZAiZy"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/oz-upgradeable/proxy/utils/Initializable.sol": {
+        "keccak256": "0x71cf7f66d423ff53373959a935a376cda8957f8e1c899f7e80b93db20936b33e",
+        "urls": [
+          "bzz-raw://49cfc69d5690ca021f87741ab592207a2c7d0d42165e8ef7c877b7e8ed1ccb02",
+          "dweb:/ipfs/QmNT4XAgqg3ey6ApMwiRsrJXDp3k1ndVGw2Dyv6wuc9gMv"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/oz-upgradeable/utils/ContextUpgradeable.sol": {
+        "keccak256": "0x8d195f4fb42b15464ab01ae3fb99b6f5c88526ae9b4187f0774741ad0dc6d3d2",
+        "urls": [
+          "bzz-raw://3a2c223fb1f1d38983f2c58d410032d20220b1050c1effbbfcac71e73da3e622",
+          "dweb:/ipfs/QmQ1da9VzJZc6bkN7hNUeMUm3JxNxDBvSTDkqSkrfAZZp2"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/oz/utils/Create2.sol": {
+        "keccak256": "0x2cc3761bc38bff25ecd2a0d9e9083a3bad801070bf08114394e989399ee1a26f",
+        "urls": [
+          "bzz-raw://f755093521ab1533d2c1d04f9a0e63fa47f556590f39c20bef75c7fdc589bbe4",
+          "dweb:/ipfs/QmRr564LeDGmDV6GL7rTPTnzoHL5F5SFyXYHPV2zoeSHfb"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/oz-custom/contracts/internal-upgradeable/ProxylessUpgrader.sol",
+    "id": 3774,
+    "exportedSymbols": {
+      "Bytes32Address": [
+        5352
+      ],
+      "ContextUpgradeable": [
+        8008
+      ],
+      "DeterministicDeployer": [
+        4396
+      ],
+      "IKillable": [
+        3703
+      ],
+      "Initializable": [
+        7426
+      ],
+      "Initializable__AlreadyInitialized": [
+        7262
+      ],
+      "Initializable__Initializing": [
+        7258
+      ],
+      "Initializable__NotInitializing": [
+        7260
+      ],
+      "ProxyCreator": [
+        6161
+      ],
+      "ProxyCreator__DeploymentFailed": [
+        6051
+      ],
+      "ProxyCreator__InitializationFailed": [
+        6053
+      ],
+      "ProxylessUpgrader": [
+        3773
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1033:20",
+    "nodes": [
+      {
+        "id": 3695,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:20",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 3696,
+        "nodeType": "ImportDirective",
+        "src": "58:56:20",
+        "nodes": [],
+        "absolutePath": "node_modules/oz-custom/contracts/oz-upgradeable/utils/ContextUpgradeable.sol",
+        "file": "../oz-upgradeable/utils/ContextUpgradeable.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 3774,
+        "sourceUnit": 8009,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 3698,
+        "nodeType": "ImportDirective",
+        "src": "116:76:20",
+        "nodes": [],
+        "absolutePath": "node_modules/oz-custom/contracts/internal/DeterministicDeployer.sol",
+        "file": "../internal/DeterministicDeployer.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 3774,
+        "sourceUnit": 4518,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 3697,
+              "name": "DeterministicDeployer",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4396,
+              "src": "124:21:20",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 3699,
+        "nodeType": "ImportDirective",
+        "src": "194:39:20",
+        "nodes": [],
+        "absolutePath": "node_modules/oz-custom/contracts/libraries/ProxyCreator.sol",
+        "file": "../libraries/ProxyCreator.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 3774,
+        "sourceUnit": 6162,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 3703,
+        "nodeType": "ContractDefinition",
+        "src": "235:53:20",
+        "nodes": [
+          {
+            "id": 3702,
+            "nodeType": "FunctionDefinition",
+            "src": "261:25:20",
+            "nodes": [],
+            "functionSelector": "41c0e1b5",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "kill",
+            "nameLocation": "270:4:20",
+            "parameters": {
+              "id": 3700,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "274:2:20"
+            },
+            "returnParameters": {
+              "id": 3701,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "285:0:20"
+            },
+            "scope": 3703,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IKillable",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          3703
+        ],
+        "name": "IKillable",
+        "nameLocation": "245:9:20",
+        "scope": 3774,
+        "usedErrors": []
+      },
+      {
+        "id": 3773,
+        "nodeType": "ContractDefinition",
+        "src": "290:774:20",
+        "nodes": [
+          {
+            "id": 3710,
+            "nodeType": "VariableDeclaration",
+            "src": "385:25:20",
+            "nodes": [],
+            "constant": false,
+            "functionSelector": "022ec095",
+            "mutability": "mutable",
+            "name": "instance",
+            "nameLocation": "402:8:20",
+            "scope": 3773,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IKillable_$3703",
+              "typeString": "contract IKillable"
+            },
+            "typeName": {
+              "id": 3709,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 3708,
+                "name": "IKillable",
+                "nameLocations": [
+                  "385:9:20"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 3703,
+                "src": "385:9:20"
+              },
+              "referencedDeclaration": 3703,
+              "src": "385:9:20",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IKillable_$3703",
+                "typeString": "contract IKillable"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 3716,
+            "nodeType": "FunctionDefinition",
+            "src": "417:64:20",
+            "nodes": [],
+            "body": {
+              "id": 3715,
+              "nodeType": "Block",
+              "src": "479:2:20",
+              "nodes": [],
+              "statements": []
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 3713,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 3712,
+                  "name": "onlyInitializing",
+                  "nameLocations": [
+                    "462:16:20"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 7388,
+                  "src": "462:16:20"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "462:16:20"
+              }
+            ],
+            "name": "__ProxylessUpgrader_init",
+            "nameLocation": "426:24:20",
+            "parameters": {
+              "id": 3711,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "450:2:20"
+            },
+            "returnParameters": {
+              "id": 3714,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "479:0:20"
+            },
+            "scope": 3773,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 3722,
+            "nodeType": "FunctionDefinition",
+            "src": "487:74:20",
+            "nodes": [],
+            "body": {
+              "id": 3721,
+              "nodeType": "Block",
+              "src": "559:2:20",
+              "nodes": [],
+              "statements": []
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 3719,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 3718,
+                  "name": "onlyInitializing",
+                  "nameLocations": [
+                    "542:16:20"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 7388,
+                  "src": "542:16:20"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "542:16:20"
+              }
+            ],
+            "name": "__ProxylessUpgrader_init_unchained",
+            "nameLocation": "496:34:20",
+            "parameters": {
+              "id": 3717,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "530:2:20"
+            },
+            "returnParameters": {
+              "id": 3720,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "559:0:20"
+            },
+            "scope": 3773,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 3731,
+            "nodeType": "FunctionDefinition",
+            "src": "567:61:20",
+            "nodes": [],
+            "body": {
+              "id": 3730,
+              "nodeType": "Block",
+              "src": "596:32:20",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 3725,
+                        "name": "instance",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3710,
+                        "src": "606:8:20",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IKillable_$3703",
+                          "typeString": "contract IKillable"
+                        }
+                      },
+                      "id": 3727,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "615:4:20",
+                      "memberName": "kill",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3702,
+                      "src": "606:13:20",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
+                        "typeString": "function () external"
+                      }
+                    },
+                    "id": 3728,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "606:15:20",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3729,
+                  "nodeType": "ExpressionStatement",
+                  "src": "606:15:20"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_destroy",
+            "nameLocation": "576:8:20",
+            "parameters": {
+              "id": 3723,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "584:2:20"
+            },
+            "returnParameters": {
+              "id": 3724,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "596:0:20"
+            },
+            "scope": 3773,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 3768,
+            "nodeType": "FunctionDefinition",
+            "src": "634:396:20",
+            "nodes": [],
+            "body": {
+              "id": 3767,
+              "nodeType": "Block",
+              "src": "755:275:20",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    3742
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 3742,
+                      "mutability": "mutable",
+                      "name": "_instance",
+                      "nameLocation": "773:9:20",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 3767,
+                      "src": "765:17:20",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 3741,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "765:7:20",
+                        "stateMutability": "nonpayable",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 3749,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 3745,
+                        "name": "salt_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3735,
+                        "src": "805:5:20",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "id": 3746,
+                        "name": "bytecode_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3737,
+                        "src": "812:9:20",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      {
+                        "id": 3747,
+                        "name": "amount_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3733,
+                        "src": "823:7:20",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 3743,
+                        "name": "ProxyCreator",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6161,
+                        "src": "785:12:20",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ProxyCreator_$6161_$",
+                          "typeString": "type(library ProxyCreator)"
+                        }
+                      },
+                      "id": 3744,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "798:6:20",
+                      "memberName": "deploy",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 6121,
+                      "src": "785:19:20",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$_t_bytes_memory_ptr_$_t_uint256_$returns$_t_address_$",
+                        "typeString": "function (bytes32,bytes memory,uint256) returns (address)"
+                      }
+                    },
+                    "id": 3748,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "785:46:20",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "765:66:20"
+                },
+                {
+                  "expression": {
+                    "id": 3754,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 3750,
+                      "name": "instance",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3710,
+                      "src": "842:8:20",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IKillable_$3703",
+                        "typeString": "contract IKillable"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 3752,
+                          "name": "_instance",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 3742,
+                          "src": "863:9:20",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 3751,
+                        "name": "IKillable",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3703,
+                        "src": "853:9:20",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IKillable_$3703_$",
+                          "typeString": "type(contract IKillable)"
+                        }
+                      },
+                      "id": 3753,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "853:20:20",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IKillable_$3703",
+                        "typeString": "contract IKillable"
+                      }
+                    },
+                    "src": "842:31:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IKillable_$3703",
+                      "typeString": "contract IKillable"
+                    }
+                  },
+                  "id": 3755,
+                  "nodeType": "ExpressionStatement",
+                  "src": "842:31:20"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "id": 3757,
+                        "name": "_instance",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3742,
+                        "src": "911:9:20",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 3758,
+                        "name": "salt_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3735,
+                        "src": "934:5:20",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 3759,
+                          "name": "_instance",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 3742,
+                          "src": "953:9:20",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "id": 3760,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "963:8:20",
+                        "memberName": "codehash",
+                        "nodeType": "MemberAccess",
+                        "src": "953:18:20",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "id": 3762,
+                              "name": "ProxylessUpgrader",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 3773,
+                              "src": "990:17:20",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_contract$_ProxylessUpgrader_$3773_$",
+                                "typeString": "type(contract ProxylessUpgrader)"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_type$_t_contract$_ProxylessUpgrader_$3773_$",
+                                "typeString": "type(contract ProxylessUpgrader)"
+                              }
+                            ],
+                            "id": 3761,
+                            "name": "type",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -27,
+                            "src": "985:4:20",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_metatype_pure$__$returns$__$",
+                              "typeString": "function () pure"
+                            }
+                          },
+                          "id": 3763,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "985:23:20",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_meta_type_t_contract$_ProxylessUpgrader_$3773",
+                            "typeString": "type(contract ProxylessUpgrader)"
+                          }
+                        },
+                        "id": 3764,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberLocation": "1009:4:20",
+                        "memberName": "name",
+                        "nodeType": "MemberAccess",
+                        "src": "985:28:20",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 3756,
+                      "name": "Deployed",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4386,
+                      "src": "889:8:20",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_bytes32_$_t_bytes32_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (address,bytes32,bytes32,string memory)"
+                      }
+                    },
+                    "id": 3765,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "889:134:20",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3766,
+                  "nodeType": "EmitStatement",
+                  "src": "884:139:20"
+                }
+              ]
+            },
+            "baseFunctions": [
+              4395
+            ],
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_deploy",
+            "nameLocation": "643:7:20",
+            "overrides": {
+              "id": 3739,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "746:8:20"
+            },
+            "parameters": {
+              "id": 3738,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3733,
+                  "mutability": "mutable",
+                  "name": "amount_",
+                  "nameLocation": "668:7:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3768,
+                  "src": "660:15:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3732,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "660:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3735,
+                  "mutability": "mutable",
+                  "name": "salt_",
+                  "nameLocation": "693:5:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3768,
+                  "src": "685:13:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3734,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "685:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3737,
+                  "mutability": "mutable",
+                  "name": "bytecode_",
+                  "nameLocation": "721:9:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3768,
+                  "src": "708:22:20",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3736,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "708:5:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "650:86:20"
+            },
+            "returnParameters": {
+              "id": 3740,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "755:0:20"
+            },
+            "scope": 3773,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 3772,
+            "nodeType": "VariableDeclaration",
+            "src": "1036:25:20",
+            "nodes": [],
+            "constant": false,
+            "mutability": "mutable",
+            "name": "__gap",
+            "nameLocation": "1056:5:20",
+            "scope": 3773,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$49_storage",
+              "typeString": "uint256[49]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 3769,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "1036:7:20",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 3771,
+              "length": {
+                "hexValue": "3439",
+                "id": 3770,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "1044:2:20",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_49_by_1",
+                  "typeString": "int_const 49"
+                },
+                "value": "49"
+              },
+              "nodeType": "ArrayTypeName",
+              "src": "1036:11:20",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$49_storage_ptr",
+                "typeString": "uint256[49]"
+              }
+            },
+            "visibility": "private"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 3704,
+              "name": "ContextUpgradeable",
+              "nameLocations": [
+                "333:18:20"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 8008,
+              "src": "333:18:20"
+            },
+            "id": 3705,
+            "nodeType": "InheritanceSpecifier",
+            "src": "333:18:20"
+          },
+          {
+            "baseName": {
+              "id": 3706,
+              "name": "DeterministicDeployer",
+              "nameLocations": [
+                "357:21:20"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 4396,
+              "src": "357:21:20"
+            },
+            "id": 3707,
+            "nodeType": "InheritanceSpecifier",
+            "src": "357:21:20"
+          }
+        ],
+        "canonicalName": "ProxylessUpgrader",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          3773,
+          4396,
+          8008,
+          7426
+        ],
+        "name": "ProxylessUpgrader",
+        "nameLocation": "308:17:20",
+        "scope": 3774,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 20
+}

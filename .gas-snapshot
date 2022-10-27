@@ -1,0 +1,5 @@
+VoucherCreatorTest:testSuccessBatchCommitReveal() (gas: 227792)
+VoucherCreatorTest:testSuccessRedeemWithXOR() (gas: 169758)
+VoucherCreatorTest:testValidERC20Voucher() (gas: 164695)
+VoucherCreatorTest:testValidERC721SingleVoucher() (gas: 130398)
+VoucherCreatorTest:testValidNativeVoucher() (gas: 93920)

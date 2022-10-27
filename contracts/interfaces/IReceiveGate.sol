@@ -21,17 +21,17 @@ interface IReceiveGate is IKillable {
 
     function whitelistAddress(address addr_) external;
 
-    function depositNativeTokenWithCommand() external payable;
+    // function depositNativeTokenWithCommand(bytes calldata data_) external payable;
 
-    function depositERC20WithCommand(
-        IERC20Permit token_,
-        uint256 value_,
-        uint256 deadline_,
-        uint8 v,
-        bytes32 r,
-        bytes32 s,
-        bytes calldata data_
-    ) external;
+    // function depositERC20WithCommand(
+    //     IERC20Permit token_,
+    //     uint256 value_,
+    //     uint256 deadline_,
+    //     uint8 v,
+    //     bytes32 r,
+    //     bytes32 s,
+    //     bytes calldata data_
+    // ) external;
 
     function withdrawTo(address token_, address to_, uint256 value_) external;
 }

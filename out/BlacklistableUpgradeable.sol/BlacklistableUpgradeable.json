@@ -1,0 +1,1180 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Blacklisted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "version",
+          "type": "uint256"
+        }
+      ],
+      "name": "Initialized",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Whitelisted",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account_",
+          "type": "address"
+        }
+      ],
+      "name": "isBlacklisted",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account_",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "status",
+          "type": "bool"
+        }
+      ],
+      "name": "setUserStatus",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "isBlacklisted(address)": "fe575a87",
+    "setUserStatus(address,bool)": "21eceff7"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Blacklisted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"version\",\"type\":\"uint256\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Whitelisted\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account_\",\"type\":\"address\"}],\"name\":\"isBlacklisted\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account_\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"status\",\"type\":\"bool\"}],\"name\":\"setUserStatus\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/oz-custom/contracts/internal-upgradeable/BlacklistableUpgradeable.sol\":\"BlacklistableUpgradeable\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":1000000},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":oz-custom/=node_modules/oz-custom/\"]},\"sources\":{\"node_modules/oz-custom/contracts/internal-upgradeable/BlacklistableUpgradeable.sol\":{\"keccak256\":\"0x085fdb55f699b985f2b8431c7293f455eb6ab6927d702bb1abc8864e995d5c8f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2d4c8ad16609be925f27a504b0c21fff793628e275eae52a445cb06026bf44af\",\"dweb:/ipfs/QmXRabqY91zNA3oM6LFDyqHfU8Yn2LuhoLxrojW6EJoDfx\"]},\"node_modules/oz-custom/contracts/internal-upgradeable/interfaces/IBlacklistableUpgradeable.sol\":{\"keccak256\":\"0x61c99de459d92f0ea5bb317f0e1a8f3779a3f618a30da114dca71ffa83be5a77\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2944f830db8fc6cf6ece7bbaa5737bd2fb12660272248defa042106821ece3ce\",\"dweb:/ipfs/QmeocnrimuVLjo5WbNXjsLoZb79P5cx3E1U8h9zAGThjF3\"]},\"node_modules/oz-custom/contracts/libraries/Bytes32Address.sol\":{\"keccak256\":\"0x922291d1536c966dfc4f061135ed923aa024b30dc2f1745dd06f0d0f605fea33\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://39a03e29d32d65cda5a3d188b52937d839357e67009e3d8b60388fe8633bc44f\",\"dweb:/ipfs/QmUsQ5dvRzn6jM87iFhNQmHjonp1V1HLSvHusZ4HSi4s5G\"]},\"node_modules/oz-custom/contracts/oz-upgradeable/proxy/utils/Initializable.sol\":{\"keccak256\":\"0x71cf7f66d423ff53373959a935a376cda8957f8e1c899f7e80b93db20936b33e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://49cfc69d5690ca021f87741ab592207a2c7d0d42165e8ef7c877b7e8ed1ccb02\",\"dweb:/ipfs/QmNT4XAgqg3ey6ApMwiRsrJXDp3k1ndVGw2Dyv6wuc9gMv\"]},\"node_modules/oz-custom/contracts/oz-upgradeable/utils/ContextUpgradeable.sol\":{\"keccak256\":\"0x8d195f4fb42b15464ab01ae3fb99b6f5c88526ae9b4187f0774741ad0dc6d3d2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3a2c223fb1f1d38983f2c58d410032d20220b1050c1effbbfcac71e73da3e622\",\"dweb:/ipfs/QmQ1da9VzJZc6bkN7hNUeMUm3JxNxDBvSTDkqSkrfAZZp2\"]},\"node_modules/oz-custom/contracts/oz-upgradeable/utils/structs/BitMapsUpgradeable.sol\":{\"keccak256\":\"0x40948be53c8672242fd47130146b1865ba52f83ebf74ffec5c8d2ed041fc97cf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4bb4104b690332c7d68cf725551bba0515dc9cd66ab63cf9aabba018559d06c1\",\"dweb:/ipfs/QmQvbyBo2JePN57VfSuWHv71UwwnYeD7QbByxWrv86Uvhw\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "account",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "Blacklisted",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "version",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Initialized",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "account",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "Whitelisted",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "account_",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isBlacklisted",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "account_",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "status",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setUserStatus"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=node_modules/hardhat/",
+        ":oz-custom/=node_modules/oz-custom/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 1000000
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "node_modules/oz-custom/contracts/internal-upgradeable/BlacklistableUpgradeable.sol": "BlacklistableUpgradeable"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/oz-custom/contracts/internal-upgradeable/BlacklistableUpgradeable.sol": {
+        "keccak256": "0x085fdb55f699b985f2b8431c7293f455eb6ab6927d702bb1abc8864e995d5c8f",
+        "urls": [
+          "bzz-raw://2d4c8ad16609be925f27a504b0c21fff793628e275eae52a445cb06026bf44af",
+          "dweb:/ipfs/QmXRabqY91zNA3oM6LFDyqHfU8Yn2LuhoLxrojW6EJoDfx"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/internal-upgradeable/interfaces/IBlacklistableUpgradeable.sol": {
+        "keccak256": "0x61c99de459d92f0ea5bb317f0e1a8f3779a3f618a30da114dca71ffa83be5a77",
+        "urls": [
+          "bzz-raw://2944f830db8fc6cf6ece7bbaa5737bd2fb12660272248defa042106821ece3ce",
+          "dweb:/ipfs/QmeocnrimuVLjo5WbNXjsLoZb79P5cx3E1U8h9zAGThjF3"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/libraries/Bytes32Address.sol": {
+        "keccak256": "0x922291d1536c966dfc4f061135ed923aa024b30dc2f1745dd06f0d0f605fea33",
+        "urls": [
+          "bzz-raw://39a03e29d32d65cda5a3d188b52937d839357e67009e3d8b60388fe8633bc44f",
+          "dweb:/ipfs/QmUsQ5dvRzn6jM87iFhNQmHjonp1V1HLSvHusZ4HSi4s5G"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/oz-upgradeable/proxy/utils/Initializable.sol": {
+        "keccak256": "0x71cf7f66d423ff53373959a935a376cda8957f8e1c899f7e80b93db20936b33e",
+        "urls": [
+          "bzz-raw://49cfc69d5690ca021f87741ab592207a2c7d0d42165e8ef7c877b7e8ed1ccb02",
+          "dweb:/ipfs/QmNT4XAgqg3ey6ApMwiRsrJXDp3k1ndVGw2Dyv6wuc9gMv"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/oz-upgradeable/utils/ContextUpgradeable.sol": {
+        "keccak256": "0x8d195f4fb42b15464ab01ae3fb99b6f5c88526ae9b4187f0774741ad0dc6d3d2",
+        "urls": [
+          "bzz-raw://3a2c223fb1f1d38983f2c58d410032d20220b1050c1effbbfcac71e73da3e622",
+          "dweb:/ipfs/QmQ1da9VzJZc6bkN7hNUeMUm3JxNxDBvSTDkqSkrfAZZp2"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/oz-upgradeable/utils/structs/BitMapsUpgradeable.sol": {
+        "keccak256": "0x40948be53c8672242fd47130146b1865ba52f83ebf74ffec5c8d2ed041fc97cf",
+        "urls": [
+          "bzz-raw://4bb4104b690332c7d68cf725551bba0515dc9cd66ab63cf9aabba018559d06c1",
+          "dweb:/ipfs/QmQvbyBo2JePN57VfSuWHv71UwwnYeD7QbByxWrv86Uvhw"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/oz-custom/contracts/internal-upgradeable/BlacklistableUpgradeable.sol",
+    "id": 3369,
+    "exportedSymbols": {
+      "BitMapsUpgradeable": [
+        8655
+      ],
+      "BlacklistableUpgradeable": [
+        3368
+      ],
+      "Bytes32Address": [
+        5352
+      ],
+      "ContextUpgradeable": [
+        8008
+      ],
+      "IBlacklistableUpgradeable": [
+        4326
+      ],
+      "Initializable": [
+        7426
+      ],
+      "Initializable__AlreadyInitialized": [
+        7262
+      ],
+      "Initializable__Initializing": [
+        7258
+      ],
+      "Initializable__NotInitializing": [
+        7260
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1036:16",
+    "nodes": [
+      {
+        "id": 3294,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:16",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 3295,
+        "nodeType": "ImportDirective",
+        "src": "58:56:16",
+        "nodes": [],
+        "absolutePath": "node_modules/oz-custom/contracts/oz-upgradeable/utils/ContextUpgradeable.sol",
+        "file": "../oz-upgradeable/utils/ContextUpgradeable.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 3369,
+        "sourceUnit": 8009,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 3296,
+        "nodeType": "ImportDirective",
+        "src": "115:64:16",
+        "nodes": [],
+        "absolutePath": "node_modules/oz-custom/contracts/oz-upgradeable/utils/structs/BitMapsUpgradeable.sol",
+        "file": "../oz-upgradeable/utils/structs/BitMapsUpgradeable.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 3369,
+        "sourceUnit": 8656,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 3297,
+        "nodeType": "ImportDirective",
+        "src": "181:41:16",
+        "nodes": [],
+        "absolutePath": "node_modules/oz-custom/contracts/libraries/Bytes32Address.sol",
+        "file": "../libraries/Bytes32Address.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 3369,
+        "sourceUnit": 5353,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 3298,
+        "nodeType": "ImportDirective",
+        "src": "224:52:16",
+        "nodes": [],
+        "absolutePath": "node_modules/oz-custom/contracts/internal-upgradeable/interfaces/IBlacklistableUpgradeable.sol",
+        "file": "./interfaces/IBlacklistableUpgradeable.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 3369,
+        "sourceUnit": 4327,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 3368,
+        "nodeType": "ContractDefinition",
+        "src": "278:789:16",
+        "nodes": [
+          {
+            "id": 3305,
+            "nodeType": "UsingForDirective",
+            "src": "384:33:16",
+            "nodes": [],
+            "global": false,
+            "libraryName": {
+              "id": 3303,
+              "name": "Bytes32Address",
+              "nameLocations": [
+                "390:14:16"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 5352,
+              "src": "390:14:16"
+            },
+            "typeName": {
+              "id": 3304,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "409:7:16",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            }
+          },
+          {
+            "id": 3309,
+            "nodeType": "UsingForDirective",
+            "src": "422:55:16",
+            "nodes": [],
+            "global": false,
+            "libraryName": {
+              "id": 3306,
+              "name": "BitMapsUpgradeable",
+              "nameLocations": [
+                "428:18:16"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 8655,
+              "src": "428:18:16"
+            },
+            "typeName": {
+              "id": 3308,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 3307,
+                "name": "BitMapsUpgradeable.BitMap",
+                "nameLocations": [
+                  "451:18:16",
+                  "470:6:16"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 8549,
+                "src": "451:25:16"
+              },
+              "referencedDeclaration": 8549,
+              "src": "451:25:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_BitMap_$8549_storage_ptr",
+                "typeString": "struct BitMapsUpgradeable.BitMap"
+              }
+            }
+          },
+          {
+            "id": 3312,
+            "nodeType": "VariableDeclaration",
+            "src": "483:46:16",
+            "nodes": [],
+            "constant": false,
+            "mutability": "mutable",
+            "name": "_blacklisted",
+            "nameLocation": "517:12:16",
+            "scope": 3368,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_BitMap_$8549_storage",
+              "typeString": "struct BitMapsUpgradeable.BitMap"
+            },
+            "typeName": {
+              "id": 3311,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 3310,
+                "name": "BitMapsUpgradeable.BitMap",
+                "nameLocations": [
+                  "483:18:16",
+                  "502:6:16"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 8549,
+                "src": "483:25:16"
+              },
+              "referencedDeclaration": 8549,
+              "src": "483:25:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_BitMap_$8549_storage_ptr",
+                "typeString": "struct BitMapsUpgradeable.BitMap"
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "id": 3318,
+            "nodeType": "FunctionDefinition",
+            "src": "536:60:16",
+            "nodes": [],
+            "body": {
+              "id": 3317,
+              "nodeType": "Block",
+              "src": "594:2:16",
+              "nodes": [],
+              "statements": []
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 3315,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 3314,
+                  "name": "onlyInitializing",
+                  "nameLocations": [
+                    "577:16:16"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 7388,
+                  "src": "577:16:16"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "577:16:16"
+              }
+            ],
+            "name": "__Blacklistable_init",
+            "nameLocation": "545:20:16",
+            "parameters": {
+              "id": 3313,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "565:2:16"
+            },
+            "returnParameters": {
+              "id": 3316,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "594:0:16"
+            },
+            "scope": 3368,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 3324,
+            "nodeType": "FunctionDefinition",
+            "src": "602:70:16",
+            "nodes": [],
+            "body": {
+              "id": 3323,
+              "nodeType": "Block",
+              "src": "670:2:16",
+              "nodes": [],
+              "statements": []
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 3321,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 3320,
+                  "name": "onlyInitializing",
+                  "nameLocations": [
+                    "653:16:16"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 7388,
+                  "src": "653:16:16"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "653:16:16"
+              }
+            ],
+            "name": "__Blacklistable_init_unchained",
+            "nameLocation": "611:30:16",
+            "parameters": {
+              "id": 3319,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "641:2:16"
+            },
+            "returnParameters": {
+              "id": 3322,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "670:0:16"
+            },
+            "scope": 3368,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 3331,
+            "nodeType": "FunctionDefinition",
+            "src": "678:71:16",
+            "nodes": [],
+            "baseFunctions": [
+              4318
+            ],
+            "functionSelector": "21eceff7",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setUserStatus",
+            "nameLocation": "687:13:16",
+            "parameters": {
+              "id": 3329,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3326,
+                  "mutability": "mutable",
+                  "name": "account_",
+                  "nameLocation": "709:8:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3331,
+                  "src": "701:16:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3325,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "701:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3328,
+                  "mutability": "mutable",
+                  "name": "status",
+                  "nameLocation": "724:6:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3331,
+                  "src": "719:11:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3327,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "719:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "700:31:16"
+            },
+            "returnParameters": {
+              "id": 3330,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "748:0:16"
+            },
+            "scope": 3368,
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "external"
+          },
+          {
+            "id": 3346,
+            "nodeType": "FunctionDefinition",
+            "src": "755:135:16",
+            "nodes": [],
+            "body": {
+              "id": 3345,
+              "nodeType": "Block",
+              "src": "823:67:16",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "expression": {
+                            "id": 3340,
+                            "name": "account_",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3333,
+                            "src": "857:8:16",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "id": 3341,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "866:14:16",
+                          "memberName": "fillLast96Bits",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 5333,
+                          "src": "857:23:16",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_address_$returns$_t_uint256_$bound_to$_t_address_$",
+                            "typeString": "function (address) pure returns (uint256)"
+                          }
+                        },
+                        "id": 3342,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "857:25:16",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 3338,
+                        "name": "_blacklisted",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3312,
+                        "src": "840:12:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_BitMap_$8549_storage",
+                          "typeString": "struct BitMapsUpgradeable.BitMap storage ref"
+                        }
+                      },
+                      "id": 3339,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "853:3:16",
+                      "memberName": "get",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 8578,
+                      "src": "840:16:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_BitMap_$8549_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_BitMap_$8549_storage_ptr_$",
+                        "typeString": "function (struct BitMapsUpgradeable.BitMap storage pointer,uint256) view returns (bool)"
+                      }
+                    },
+                    "id": 3343,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "840:43:16",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 3337,
+                  "id": 3344,
+                  "nodeType": "Return",
+                  "src": "833:50:16"
+                }
+              ]
+            },
+            "baseFunctions": [
+              4325
+            ],
+            "functionSelector": "fe575a87",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isBlacklisted",
+            "nameLocation": "764:13:16",
+            "parameters": {
+              "id": 3334,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3333,
+                  "mutability": "mutable",
+                  "name": "account_",
+                  "nameLocation": "786:8:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3346,
+                  "src": "778:16:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3332,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "778:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "777:18:16"
+            },
+            "returnParameters": {
+              "id": 3337,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3336,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3346,
+                  "src": "817:4:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3335,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "817:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "816:6:16"
+            },
+            "scope": 3368,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 3363,
+            "nodeType": "FunctionDefinition",
+            "src": "896:137:16",
+            "nodes": [],
+            "body": {
+              "id": 3362,
+              "nodeType": "Block",
+              "src": "961:72:16",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "expression": {
+                            "id": 3356,
+                            "name": "account_",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3348,
+                            "src": "990:8:16",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "id": 3357,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "999:15:16",
+                          "memberName": "fillFirst96Bits",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 5351,
+                          "src": "990:24:16",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_address_$returns$_t_uint256_$bound_to$_t_address_$",
+                            "typeString": "function (address) pure returns (uint256)"
+                          }
+                        },
+                        "id": 3358,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "990:26:16",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 3359,
+                        "name": "status_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3350,
+                        "src": "1018:7:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "expression": {
+                        "id": 3353,
+                        "name": "_blacklisted",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3312,
+                        "src": "971:12:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_BitMap_$8549_storage",
+                          "typeString": "struct BitMapsUpgradeable.BitMap storage ref"
+                        }
+                      },
+                      "id": 3355,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "984:5:16",
+                      "memberName": "setTo",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 8602,
+                      "src": "971:18:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_BitMap_$8549_storage_ptr_$_t_uint256_$_t_bool_$returns$__$bound_to$_t_struct$_BitMap_$8549_storage_ptr_$",
+                        "typeString": "function (struct BitMapsUpgradeable.BitMap storage pointer,uint256,bool)"
+                      }
+                    },
+                    "id": 3360,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "971:55:16",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3361,
+                  "nodeType": "ExpressionStatement",
+                  "src": "971:55:16"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_setUserStatus",
+            "nameLocation": "905:14:16",
+            "parameters": {
+              "id": 3351,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3348,
+                  "mutability": "mutable",
+                  "name": "account_",
+                  "nameLocation": "928:8:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3363,
+                  "src": "920:16:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3347,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "920:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3350,
+                  "mutability": "mutable",
+                  "name": "status_",
+                  "nameLocation": "943:7:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3363,
+                  "src": "938:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3349,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "938:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "919:32:16"
+            },
+            "returnParameters": {
+              "id": 3352,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "961:0:16"
+            },
+            "scope": 3368,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 3367,
+            "nodeType": "VariableDeclaration",
+            "src": "1039:25:16",
+            "nodes": [],
+            "constant": false,
+            "mutability": "mutable",
+            "name": "__gap",
+            "nameLocation": "1059:5:16",
+            "scope": 3368,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$49_storage",
+              "typeString": "uint256[49]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 3364,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "1039:7:16",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 3366,
+              "length": {
+                "hexValue": "3439",
+                "id": 3365,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "1047:2:16",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_49_by_1",
+                  "typeString": "int_const 49"
+                },
+                "value": "49"
+              },
+              "nodeType": "ArrayTypeName",
+              "src": "1039:11:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$49_storage_ptr",
+                "typeString": "uint256[49]"
+              }
+            },
+            "visibility": "private"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 3299,
+              "name": "ContextUpgradeable",
+              "nameLocations": [
+                "328:18:16"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 8008,
+              "src": "328:18:16"
+            },
+            "id": 3300,
+            "nodeType": "InheritanceSpecifier",
+            "src": "328:18:16"
+          },
+          {
+            "baseName": {
+              "id": 3301,
+              "name": "IBlacklistableUpgradeable",
+              "nameLocations": [
+                "352:25:16"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 4326,
+              "src": "352:25:16"
+            },
+            "id": 3302,
+            "nodeType": "InheritanceSpecifier",
+            "src": "352:25:16"
+          }
+        ],
+        "canonicalName": "BlacklistableUpgradeable",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          3368,
+          4326,
+          8008,
+          7426
+        ],
+        "name": "BlacklistableUpgradeable",
+        "nameLocation": "296:24:16",
+        "scope": 3369,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 16
+}

@@ -17,9 +17,9 @@ interface IVoucherCreator {
 
     struct Voucher {
         address token;
+        uint96 value;
         uint64 start;
         uint64 end;
-        uint256 value;
     }
 
     event Commited(address indexed user, bytes32 indexed commitment);
@@ -29,7 +29,6 @@ interface IVoucherCreator {
         uint256 indexed value
     );
     event VoucherCreated(
-        address indexed,
         address indexed token,
         uint256 indexed value,
         uint256 start,
@@ -43,12 +42,13 @@ interface IVoucherCreator {
         external;
 
     function requestVoucherCreation(
-        address from_,
-        address token_,
+        uint8 amountEach_,
         uint64 start_,
         uint64 end_,
-        uint256 value_,
-        bytes32 root_
+        uint96 value_,
+        bytes32 root_,
+        address token_,
+        uint256 data_
     ) external;
 
     function batchProcess(bytes[] calldata data_) external;

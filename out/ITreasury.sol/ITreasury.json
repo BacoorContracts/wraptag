@@ -1,0 +1,1356 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "Treasury__InvalidSignature",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "contract IERC20Upgradeable",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "PaymentAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "contract IERC20Upgradeable",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "PaymentRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "contract IERC20Upgradeable[]",
+          "name": "tokens",
+          "type": "address[]"
+        }
+      ],
+      "name": "PaymentsAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Received",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "SafeReceived",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "contract IERC20Upgradeable",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Withdrawn",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20Upgradeable[]",
+          "name": "tokens_",
+          "type": "address[]"
+        }
+      ],
+      "name": "addPayments",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "payments",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20Upgradeable",
+          "name": "token_",
+          "type": "address"
+        }
+      ],
+      "name": "removePayment",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token_",
+          "type": "address"
+        }
+      ],
+      "name": "supportedPayment",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20Upgradeable",
+          "name": "token_",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to_",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "deadline_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "signature_",
+          "type": "bytes"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20Upgradeable",
+          "name": "from_",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to_",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount_",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "addPayments(address[])": "146e307a",
+    "payments()": "a6d23e10",
+    "removePayment(address)": "e5abc173",
+    "supportedPayment(address)": "8007b3f9",
+    "withdraw(address,address,uint256)": "d9caed12",
+    "withdraw(address,address,uint256,uint256,bytes)": "074540da"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"Treasury__InvalidSignature\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"contract IERC20Upgradeable\",\"name\":\"token\",\"type\":\"address\"}],\"name\":\"PaymentAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"contract IERC20Upgradeable\",\"name\":\"token\",\"type\":\"address\"}],\"name\":\"PaymentRemoved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"contract IERC20Upgradeable[]\",\"name\":\"tokens\",\"type\":\"address[]\"}],\"name\":\"PaymentsAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Received\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"SafeReceived\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"contract IERC20Upgradeable\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Withdrawn\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"contract IERC20Upgradeable[]\",\"name\":\"tokens_\",\"type\":\"address[]\"}],\"name\":\"addPayments\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"payments\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20Upgradeable\",\"name\":\"token_\",\"type\":\"address\"}],\"name\":\"removePayment\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token_\",\"type\":\"address\"}],\"name\":\"supportedPayment\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20Upgradeable\",\"name\":\"token_\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to_\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount_\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline_\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"signature_\",\"type\":\"bytes\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20Upgradeable\",\"name\":\"from_\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to_\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount_\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/ITreasury.sol\":\"ITreasury\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":1000000},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":oz-custom/=node_modules/oz-custom/\"]},\"sources\":{\"contracts/interfaces/ITreasury.sol\":{\"keccak256\":\"0x4ad46d42f292cd4bb584af05422f9dfca30d487e8c2f751172da02bbd320425b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d22717113c19d876d861e81d494d527658e19f7f1540254c0da507bcf18958c4\",\"dweb:/ipfs/QmP44Xho5iwd4mCMwEbR9EWTZuUoJ6XKz7m5W9hb54bWWK\"]},\"node_modules/oz-custom/contracts/internal-upgradeable/interfaces/IWithdrawableUpgradeable.sol\":{\"keccak256\":\"0xd1c38cf01c716ddbebd3e9a8867e3ab2963494e8a1a41d51a9bf4b752bfb8bfe\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6bed24a2226c07517b36e9072c0ebc08664d51f9ba88d63c5831675f049b928c\",\"dweb:/ipfs/QmaSEYiBZiAaFCRDy8D6gR3Yiai2FWiP9L4uKrCCwq5NMC\"]},\"node_modules/oz-custom/contracts/oz-upgradeable/token/ERC20/IERC20Upgradeable.sol\":{\"keccak256\":\"0x8333f458dde3fe58f15cabc990b57ca2af83bb9ac0ca8ef8e6b9ae7282becfbf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://314f3985a91c0f4569ea17a8b09bde27e0824bf0198cb42f733653a33aab9d6f\",\"dweb:/ipfs/QmQoSEnx2BEVf6o9N8aLmQppsxTN4XFG17Et4XoudyRDUt\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "Treasury__InvalidSignature"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20Upgradeable",
+              "name": "token",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "PaymentAdded",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20Upgradeable",
+              "name": "token",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "PaymentRemoved",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20Upgradeable[]",
+              "name": "tokens",
+              "type": "address[]",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "PaymentsAdded",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "sender",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "Received",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "SafeReceived",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20Upgradeable",
+              "name": "token",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "Withdrawn",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20Upgradeable[]",
+              "name": "tokens_",
+              "type": "address[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "addPayments"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "payments",
+          "outputs": [
+            {
+              "internalType": "address[]",
+              "name": "",
+              "type": "address[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20Upgradeable",
+              "name": "token_",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "removePayment"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "token_",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "supportedPayment",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20Upgradeable",
+              "name": "token_",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to_",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "deadline_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "signature_",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "withdraw"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20Upgradeable",
+              "name": "from_",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to_",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount_",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "withdraw"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=node_modules/hardhat/",
+        ":oz-custom/=node_modules/oz-custom/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 1000000
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "contracts/interfaces/ITreasury.sol": "ITreasury"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/interfaces/ITreasury.sol": {
+        "keccak256": "0x4ad46d42f292cd4bb584af05422f9dfca30d487e8c2f751172da02bbd320425b",
+        "urls": [
+          "bzz-raw://d22717113c19d876d861e81d494d527658e19f7f1540254c0da507bcf18958c4",
+          "dweb:/ipfs/QmP44Xho5iwd4mCMwEbR9EWTZuUoJ6XKz7m5W9hb54bWWK"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/internal-upgradeable/interfaces/IWithdrawableUpgradeable.sol": {
+        "keccak256": "0xd1c38cf01c716ddbebd3e9a8867e3ab2963494e8a1a41d51a9bf4b752bfb8bfe",
+        "urls": [
+          "bzz-raw://6bed24a2226c07517b36e9072c0ebc08664d51f9ba88d63c5831675f049b928c",
+          "dweb:/ipfs/QmaSEYiBZiAaFCRDy8D6gR3Yiai2FWiP9L4uKrCCwq5NMC"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/oz-upgradeable/token/ERC20/IERC20Upgradeable.sol": {
+        "keccak256": "0x8333f458dde3fe58f15cabc990b57ca2af83bb9ac0ca8ef8e6b9ae7282becfbf",
+        "urls": [
+          "bzz-raw://314f3985a91c0f4569ea17a8b09bde27e0824bf0198cb42f733653a33aab9d6f",
+          "dweb:/ipfs/QmQoSEnx2BEVf6o9N8aLmQppsxTN4XFG17Et4XoudyRDUt"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/ITreasury.sol",
+    "id": 2071,
+    "exportedSymbols": {
+      "IERC20Upgradeable": [
+        7834
+      ],
+      "ITreasury": [
+        2070
+      ],
+      "IWithdrawableUpgradeable": [
+        4372
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:991:10",
+    "nodes": [
+      {
+        "id": 2001,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:10",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 2002,
+        "nodeType": "ImportDirective",
+        "src": "57:90:10",
+        "nodes": [],
+        "absolutePath": "node_modules/oz-custom/contracts/internal-upgradeable/interfaces/IWithdrawableUpgradeable.sol",
+        "file": "oz-custom/contracts/internal-upgradeable/interfaces/IWithdrawableUpgradeable.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 2071,
+        "sourceUnit": 4373,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 2003,
+        "nodeType": "ImportDirective",
+        "src": "149:78:10",
+        "nodes": [],
+        "absolutePath": "node_modules/oz-custom/contracts/oz-upgradeable/token/ERC20/IERC20Upgradeable.sol",
+        "file": "oz-custom/contracts/oz-upgradeable/token/ERC20/IERC20Upgradeable.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 2071,
+        "sourceUnit": 7835,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 2070,
+        "nodeType": "ContractDefinition",
+        "src": "229:793:10",
+        "nodes": [
+          {
+            "id": 2007,
+            "nodeType": "ErrorDefinition",
+            "src": "283:35:10",
+            "nodes": [],
+            "errorSelector": "62188a5a",
+            "name": "Treasury__InvalidSignature",
+            "nameLocation": "289:26:10",
+            "parameters": {
+              "id": 2006,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "315:2:10"
+            }
+          },
+          {
+            "id": 2012,
+            "nodeType": "EventDefinition",
+            "src": "324:52:10",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "4a9da9e2d3424897a2aa243ede822bff4f48107af55d1d94caed9a6501c968c3",
+            "name": "PaymentAdded",
+            "nameLocation": "330:12:10",
+            "parameters": {
+              "id": 2011,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2010,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "369:5:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2012,
+                  "src": "343:31:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20Upgradeable_$7834",
+                    "typeString": "contract IERC20Upgradeable"
+                  },
+                  "typeName": {
+                    "id": 2009,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 2008,
+                      "name": "IERC20Upgradeable",
+                      "nameLocations": [
+                        "343:17:10"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 7834,
+                      "src": "343:17:10"
+                    },
+                    "referencedDeclaration": 7834,
+                    "src": "343:17:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20Upgradeable_$7834",
+                      "typeString": "contract IERC20Upgradeable"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "342:33:10"
+            }
+          },
+          {
+            "id": 2017,
+            "nodeType": "EventDefinition",
+            "src": "381:54:10",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "98e0ae8c0ac21cdd4b0a6a2c72737be54e995c54f6ef61b3cd19ec71ed22533b",
+            "name": "PaymentRemoved",
+            "nameLocation": "387:14:10",
+            "parameters": {
+              "id": 2016,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2015,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "428:5:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2017,
+                  "src": "402:31:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20Upgradeable_$7834",
+                    "typeString": "contract IERC20Upgradeable"
+                  },
+                  "typeName": {
+                    "id": 2014,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 2013,
+                      "name": "IERC20Upgradeable",
+                      "nameLocations": [
+                        "402:17:10"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 7834,
+                      "src": "402:17:10"
+                    },
+                    "referencedDeclaration": 7834,
+                    "src": "402:17:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20Upgradeable_$7834",
+                      "typeString": "contract IERC20Upgradeable"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "401:33:10"
+            }
+          },
+          {
+            "id": 2023,
+            "nodeType": "EventDefinition",
+            "src": "440:56:10",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "070d6fd5556b747e9a8bfa16b30a883eb9e70e27f614056fc624109ef4614533",
+            "name": "PaymentsAdded",
+            "nameLocation": "446:13:10",
+            "parameters": {
+              "id": 2022,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2021,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "tokens",
+                  "nameLocation": "488:6:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2023,
+                  "src": "460:34:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_contract$_IERC20Upgradeable_$7834_$dyn_memory_ptr",
+                    "typeString": "contract IERC20Upgradeable[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2019,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 2018,
+                        "name": "IERC20Upgradeable",
+                        "nameLocations": [
+                          "460:17:10"
+                        ],
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 7834,
+                        "src": "460:17:10"
+                      },
+                      "referencedDeclaration": 7834,
+                      "src": "460:17:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20Upgradeable_$7834",
+                        "typeString": "contract IERC20Upgradeable"
+                      }
+                    },
+                    "id": 2020,
+                    "nodeType": "ArrayTypeName",
+                    "src": "460:19:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_contract$_IERC20Upgradeable_$7834_$dyn_storage_ptr",
+                      "typeString": "contract IERC20Upgradeable[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "459:36:10"
+            }
+          },
+          {
+            "id": 2029,
+            "nodeType": "EventDefinition",
+            "src": "501:56:10",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "3d0ce9bfc3ed7d6862dbb28b2dea94561fe714a1b4d019aa8af39730d1ad7c3d",
+            "name": "SafeReceived",
+            "nameLocation": "507:12:10",
+            "parameters": {
+              "id": 2028,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2025,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "from",
+                  "nameLocation": "536:4:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2029,
+                  "src": "520:20:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2024,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "520:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2027,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "value",
+                  "nameLocation": "550:5:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2029,
+                  "src": "542:13:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2026,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "542:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "519:37:10"
+            }
+          },
+          {
+            "id": 2036,
+            "nodeType": "FunctionDefinition",
+            "src": "563:71:10",
+            "nodes": [],
+            "functionSelector": "8007b3f9",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "supportedPayment",
+            "nameLocation": "572:16:10",
+            "parameters": {
+              "id": 2032,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2031,
+                  "mutability": "mutable",
+                  "name": "token_",
+                  "nameLocation": "597:6:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2036,
+                  "src": "589:14:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2030,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "589:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "588:16:10"
+            },
+            "returnParameters": {
+              "id": 2035,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2034,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2036,
+                  "src": "628:4:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2033,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "628:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "627:6:10"
+            },
+            "scope": 2070,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 2050,
+            "nodeType": "FunctionDefinition",
+            "src": "640:175:10",
+            "nodes": [],
+            "functionSelector": "074540da",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nameLocation": "649:8:10",
+            "parameters": {
+              "id": 2048,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2039,
+                  "mutability": "mutable",
+                  "name": "token_",
+                  "nameLocation": "685:6:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2050,
+                  "src": "667:24:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20Upgradeable_$7834",
+                    "typeString": "contract IERC20Upgradeable"
+                  },
+                  "typeName": {
+                    "id": 2038,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 2037,
+                      "name": "IERC20Upgradeable",
+                      "nameLocations": [
+                        "667:17:10"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 7834,
+                      "src": "667:17:10"
+                    },
+                    "referencedDeclaration": 7834,
+                    "src": "667:17:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20Upgradeable_$7834",
+                      "typeString": "contract IERC20Upgradeable"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2041,
+                  "mutability": "mutable",
+                  "name": "to_",
+                  "nameLocation": "709:3:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2050,
+                  "src": "701:11:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2040,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "701:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2043,
+                  "mutability": "mutable",
+                  "name": "amount_",
+                  "nameLocation": "730:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2050,
+                  "src": "722:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2042,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "722:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2045,
+                  "mutability": "mutable",
+                  "name": "deadline_",
+                  "nameLocation": "755:9:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2050,
+                  "src": "747:17:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2044,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "747:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2047,
+                  "mutability": "mutable",
+                  "name": "signature_",
+                  "nameLocation": "789:10:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2050,
+                  "src": "774:25:10",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 2046,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "774:5:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "657:148:10"
+            },
+            "returnParameters": {
+              "id": 2049,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "814:0:10"
+            },
+            "scope": 2070,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 2056,
+            "nodeType": "FunctionDefinition",
+            "src": "821:61:10",
+            "nodes": [],
+            "functionSelector": "a6d23e10",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "payments",
+            "nameLocation": "830:8:10",
+            "parameters": {
+              "id": 2051,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "838:2:10"
+            },
+            "returnParameters": {
+              "id": 2055,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2054,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2056,
+                  "src": "864:16:10",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2052,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "864:7:10",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 2053,
+                    "nodeType": "ArrayTypeName",
+                    "src": "864:9:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "863:18:10"
+            },
+            "scope": 2070,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 2063,
+            "nodeType": "FunctionDefinition",
+            "src": "888:68:10",
+            "nodes": [],
+            "functionSelector": "146e307a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addPayments",
+            "nameLocation": "897:11:10",
+            "parameters": {
+              "id": 2061,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2060,
+                  "mutability": "mutable",
+                  "name": "tokens_",
+                  "nameLocation": "938:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2063,
+                  "src": "909:36:10",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_contract$_IERC20Upgradeable_$7834_$dyn_calldata_ptr",
+                    "typeString": "contract IERC20Upgradeable[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2058,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 2057,
+                        "name": "IERC20Upgradeable",
+                        "nameLocations": [
+                          "909:17:10"
+                        ],
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 7834,
+                        "src": "909:17:10"
+                      },
+                      "referencedDeclaration": 7834,
+                      "src": "909:17:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20Upgradeable_$7834",
+                        "typeString": "contract IERC20Upgradeable"
+                      }
+                    },
+                    "id": 2059,
+                    "nodeType": "ArrayTypeName",
+                    "src": "909:19:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_contract$_IERC20Upgradeable_$7834_$dyn_storage_ptr",
+                      "typeString": "contract IERC20Upgradeable[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "908:38:10"
+            },
+            "returnParameters": {
+              "id": 2062,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "955:0:10"
+            },
+            "scope": 2070,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 2069,
+            "nodeType": "FunctionDefinition",
+            "src": "962:58:10",
+            "nodes": [],
+            "functionSelector": "e5abc173",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removePayment",
+            "nameLocation": "971:13:10",
+            "parameters": {
+              "id": 2067,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2066,
+                  "mutability": "mutable",
+                  "name": "token_",
+                  "nameLocation": "1003:6:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2069,
+                  "src": "985:24:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20Upgradeable_$7834",
+                    "typeString": "contract IERC20Upgradeable"
+                  },
+                  "typeName": {
+                    "id": 2065,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 2064,
+                      "name": "IERC20Upgradeable",
+                      "nameLocations": [
+                        "985:17:10"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 7834,
+                      "src": "985:17:10"
+                    },
+                    "referencedDeclaration": 7834,
+                    "src": "985:17:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20Upgradeable_$7834",
+                      "typeString": "contract IERC20Upgradeable"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "984:26:10"
+            },
+            "returnParameters": {
+              "id": 2068,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1019:0:10"
+            },
+            "scope": 2070,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 2004,
+              "name": "IWithdrawableUpgradeable",
+              "nameLocations": [
+                "252:24:10"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 4372,
+              "src": "252:24:10"
+            },
+            "id": 2005,
+            "nodeType": "InheritanceSpecifier",
+            "src": "252:24:10"
+          }
+        ],
+        "canonicalName": "ITreasury",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          2070,
+          4372
+        ],
+        "name": "ITreasury",
+        "nameLocation": "239:9:10",
+        "scope": 2071,
+        "usedErrors": [
+          2007
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 10
+}

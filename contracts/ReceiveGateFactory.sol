@@ -25,7 +25,6 @@ contract ReceiveGateFactory is
 
     bytes32 public salt;
 
-
     function initialize(IAuthority authority_, ITreasury treasury_)
         external
         initializer

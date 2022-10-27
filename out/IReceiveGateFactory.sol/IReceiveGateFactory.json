@@ -1,0 +1,879 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "instance",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "salt",
+          "type": "bytes32"
+        }
+      ],
+      "name": "InstanceDeployed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "InstanceDestroyed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "InstanceReinited",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IReceiveGate",
+          "name": "receiveGate_",
+          "type": "address"
+        },
+        {
+          "internalType": "address[]",
+          "name": "tokens_",
+          "type": "address[]"
+        },
+        {
+          "internalType": "bool[]",
+          "name": "statuses_",
+          "type": "bool[]"
+        }
+      ],
+      "name": "deploy",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "destroy",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IReceiveGate",
+          "name": "receiveGate_",
+          "type": "address"
+        },
+        {
+          "internalType": "address[]",
+          "name": "tokens_",
+          "type": "address[]"
+        },
+        {
+          "internalType": "bool[]",
+          "name": "statuses_",
+          "type": "bool[]"
+        }
+      ],
+      "name": "reinit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "salt_",
+          "type": "bytes32"
+        }
+      ],
+      "name": "updateSalt",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "deploy(address,address[],bool[])": "45f31ca6",
+    "destroy()": "83197ef0",
+    "reinit(address,address[],bool[])": "81401957",
+    "updateSalt(bytes32)": "9aacec3c"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"instance\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"salt\",\"type\":\"bytes32\"}],\"name\":\"InstanceDeployed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"InstanceDestroyed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"InstanceReinited\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"contract IReceiveGate\",\"name\":\"receiveGate_\",\"type\":\"address\"},{\"internalType\":\"address[]\",\"name\":\"tokens_\",\"type\":\"address[]\"},{\"internalType\":\"bool[]\",\"name\":\"statuses_\",\"type\":\"bool[]\"}],\"name\":\"deploy\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"destroy\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IReceiveGate\",\"name\":\"receiveGate_\",\"type\":\"address\"},{\"internalType\":\"address[]\",\"name\":\"tokens_\",\"type\":\"address[]\"},{\"internalType\":\"bool[]\",\"name\":\"statuses_\",\"type\":\"bool[]\"}],\"name\":\"reinit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"salt_\",\"type\":\"bytes32\"}],\"name\":\"updateSalt\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/IReceiveGateFactory.sol\":\"IReceiveGateFactory\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":1000000},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":oz-custom/=node_modules/oz-custom/\"]},\"sources\":{\"contracts/interfaces/IReceiveGate.sol\":{\"keccak256\":\"0xeea669243af97f9c2d827558833e9fcdec6ece5591c1f20e5f8f37c33f8103b3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://dae5647f9ca021f9510917f4fbb73a4d8e0d42698cc5ed4e575740df24e50f28\",\"dweb:/ipfs/QmYVxWGBfymrGz84XojKWGbpQ4wU3cBNzep5LwhBtpahnV\"]},\"contracts/interfaces/IReceiveGateFactory.sol\":{\"keccak256\":\"0x4f4133a9ab0cf6967683e38eaca31d52d8bd8563b8ad3a00aa5f1160b26635f0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://73fd5fb80e90682b27571fb20ffd21b494caa94d19c619b5a83968a0b114ff78\",\"dweb:/ipfs/QmUbbRqGNCdQrvk8qY5rZ1dke7DB5SRVfPS17ntXVy8E9D\"]},\"node_modules/oz-custom/contracts/internal-upgradeable/ProxylessUpgrader.sol\":{\"keccak256\":\"0x3231ae3c0ad74b2507b4036fc573301700467899a1ad22a317ea4d207b1bc717\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://71626153779384df32e1106a6de5a037874c83652981dbdaa5c081c518e15616\",\"dweb:/ipfs/QmXMijEos5t7ruouG9BqGkuaWTB93TXYaLfMYMbrn97iyG\"]},\"node_modules/oz-custom/contracts/internal/DeterministicDeployer.sol\":{\"keccak256\":\"0x8d5633e2bb6a0f754ae060c9adc149d8740d8949086bfca99815c2e9f6b75d69\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9166af80a36cbda178d58fa8b18b2308f51f5235da0a9be50a660665141f0653\",\"dweb:/ipfs/QmZ3wgjjUkdY5jL1GvhVH9RKUrj1SZ1DU2M6a4Ya3MJVDe\"]},\"node_modules/oz-custom/contracts/libraries/Bytes32Address.sol\":{\"keccak256\":\"0x922291d1536c966dfc4f061135ed923aa024b30dc2f1745dd06f0d0f605fea33\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://39a03e29d32d65cda5a3d188b52937d839357e67009e3d8b60388fe8633bc44f\",\"dweb:/ipfs/QmUsQ5dvRzn6jM87iFhNQmHjonp1V1HLSvHusZ4HSi4s5G\"]},\"node_modules/oz-custom/contracts/libraries/Create3.sol\":{\"keccak256\":\"0x16ceecbb22c446cb9ba0749280a1a0cf7449e5d39b5826d7c0db751f77c4dadf\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://9586ced689b0b91daeb0b79274e86950ceeb680d307383a1d1f72e88f543991a\",\"dweb:/ipfs/QmUSUMuNDqgbjKmxKd1FsXKrnbNqHVTDUd6NefRujqZRWX\"]},\"node_modules/oz-custom/contracts/libraries/ProxyCreator.sol\":{\"keccak256\":\"0xe9a48f677dfa1020dbf2dcd58b457a2f8de8c0383baf7efbd714698bddb6dec8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://354e65306fdd73de6763ee483096afce9bb3b183edfa44babfecc2a81c0d8fe8\",\"dweb:/ipfs/QmRrbtXJV8m319xYvJ8TTvZeUAC12vnxikZEiRdf8ZAiZy\"]},\"node_modules/oz-custom/contracts/oz-upgradeable/proxy/utils/Initializable.sol\":{\"keccak256\":\"0x71cf7f66d423ff53373959a935a376cda8957f8e1c899f7e80b93db20936b33e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://49cfc69d5690ca021f87741ab592207a2c7d0d42165e8ef7c877b7e8ed1ccb02\",\"dweb:/ipfs/QmNT4XAgqg3ey6ApMwiRsrJXDp3k1ndVGw2Dyv6wuc9gMv\"]},\"node_modules/oz-custom/contracts/oz-upgradeable/utils/ContextUpgradeable.sol\":{\"keccak256\":\"0x8d195f4fb42b15464ab01ae3fb99b6f5c88526ae9b4187f0774741ad0dc6d3d2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3a2c223fb1f1d38983f2c58d410032d20220b1050c1effbbfcac71e73da3e622\",\"dweb:/ipfs/QmQ1da9VzJZc6bkN7hNUeMUm3JxNxDBvSTDkqSkrfAZZp2\"]},\"node_modules/oz-custom/contracts/oz/token/ERC20/extensions/draft-IERC20Permit.sol\":{\"keccak256\":\"0x34105f424efc42408e888dea69590a54b6e58002c97901011bca87fe2489eee7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f8b832080b30bbb476c96a237051c25aa508cb6fcd623415df87d9f83226fbfe\",\"dweb:/ipfs/QmUqnoPTGMf9tWRGrPESEoh7kgWJcAFyfNWMFEVm5iggwZ\"]},\"node_modules/oz-custom/contracts/oz/utils/Create2.sol\":{\"keccak256\":\"0x2cc3761bc38bff25ecd2a0d9e9083a3bad801070bf08114394e989399ee1a26f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f755093521ab1533d2c1d04f9a0e63fa47f556590f39c20bef75c7fdc589bbe4\",\"dweb:/ipfs/QmRr564LeDGmDV6GL7rTPTnzoHL5F5SFyXYHPV2zoeSHfb\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "instance",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "bytes32",
+              "name": "salt",
+              "type": "bytes32",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "InstanceDeployed",
+          "anonymous": false
+        },
+        {
+          "inputs": [],
+          "type": "event",
+          "name": "InstanceDestroyed",
+          "anonymous": false
+        },
+        {
+          "inputs": [],
+          "type": "event",
+          "name": "InstanceReinited",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IReceiveGate",
+              "name": "receiveGate_",
+              "type": "address"
+            },
+            {
+              "internalType": "address[]",
+              "name": "tokens_",
+              "type": "address[]"
+            },
+            {
+              "internalType": "bool[]",
+              "name": "statuses_",
+              "type": "bool[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "deploy"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "destroy"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IReceiveGate",
+              "name": "receiveGate_",
+              "type": "address"
+            },
+            {
+              "internalType": "address[]",
+              "name": "tokens_",
+              "type": "address[]"
+            },
+            {
+              "internalType": "bool[]",
+              "name": "statuses_",
+              "type": "bool[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "reinit"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "salt_",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "updateSalt"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=node_modules/hardhat/",
+        ":oz-custom/=node_modules/oz-custom/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 1000000
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "contracts/interfaces/IReceiveGateFactory.sol": "IReceiveGateFactory"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/interfaces/IReceiveGate.sol": {
+        "keccak256": "0xeea669243af97f9c2d827558833e9fcdec6ece5591c1f20e5f8f37c33f8103b3",
+        "urls": [
+          "bzz-raw://dae5647f9ca021f9510917f4fbb73a4d8e0d42698cc5ed4e575740df24e50f28",
+          "dweb:/ipfs/QmYVxWGBfymrGz84XojKWGbpQ4wU3cBNzep5LwhBtpahnV"
+        ],
+        "license": "MIT"
+      },
+      "contracts/interfaces/IReceiveGateFactory.sol": {
+        "keccak256": "0x4f4133a9ab0cf6967683e38eaca31d52d8bd8563b8ad3a00aa5f1160b26635f0",
+        "urls": [
+          "bzz-raw://73fd5fb80e90682b27571fb20ffd21b494caa94d19c619b5a83968a0b114ff78",
+          "dweb:/ipfs/QmUbbRqGNCdQrvk8qY5rZ1dke7DB5SRVfPS17ntXVy8E9D"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/internal-upgradeable/ProxylessUpgrader.sol": {
+        "keccak256": "0x3231ae3c0ad74b2507b4036fc573301700467899a1ad22a317ea4d207b1bc717",
+        "urls": [
+          "bzz-raw://71626153779384df32e1106a6de5a037874c83652981dbdaa5c081c518e15616",
+          "dweb:/ipfs/QmXMijEos5t7ruouG9BqGkuaWTB93TXYaLfMYMbrn97iyG"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/internal/DeterministicDeployer.sol": {
+        "keccak256": "0x8d5633e2bb6a0f754ae060c9adc149d8740d8949086bfca99815c2e9f6b75d69",
+        "urls": [
+          "bzz-raw://9166af80a36cbda178d58fa8b18b2308f51f5235da0a9be50a660665141f0653",
+          "dweb:/ipfs/QmZ3wgjjUkdY5jL1GvhVH9RKUrj1SZ1DU2M6a4Ya3MJVDe"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/libraries/Bytes32Address.sol": {
+        "keccak256": "0x922291d1536c966dfc4f061135ed923aa024b30dc2f1745dd06f0d0f605fea33",
+        "urls": [
+          "bzz-raw://39a03e29d32d65cda5a3d188b52937d839357e67009e3d8b60388fe8633bc44f",
+          "dweb:/ipfs/QmUsQ5dvRzn6jM87iFhNQmHjonp1V1HLSvHusZ4HSi4s5G"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/libraries/Create3.sol": {
+        "keccak256": "0x16ceecbb22c446cb9ba0749280a1a0cf7449e5d39b5826d7c0db751f77c4dadf",
+        "urls": [
+          "bzz-raw://9586ced689b0b91daeb0b79274e86950ceeb680d307383a1d1f72e88f543991a",
+          "dweb:/ipfs/QmUSUMuNDqgbjKmxKd1FsXKrnbNqHVTDUd6NefRujqZRWX"
+        ],
+        "license": "AGPL-3.0-only"
+      },
+      "node_modules/oz-custom/contracts/libraries/ProxyCreator.sol": {
+        "keccak256": "0xe9a48f677dfa1020dbf2dcd58b457a2f8de8c0383baf7efbd714698bddb6dec8",
+        "urls": [
+          "bzz-raw://354e65306fdd73de6763ee483096afce9bb3b183edfa44babfecc2a81c0d8fe8",
+          "dweb:/ipfs/QmRrbtXJV8m319xYvJ8TTvZeUAC12vnxikZEiRdf8ZAiZy"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/oz-upgradeable/proxy/utils/Initializable.sol": {
+        "keccak256": "0x71cf7f66d423ff53373959a935a376cda8957f8e1c899f7e80b93db20936b33e",
+        "urls": [
+          "bzz-raw://49cfc69d5690ca021f87741ab592207a2c7d0d42165e8ef7c877b7e8ed1ccb02",
+          "dweb:/ipfs/QmNT4XAgqg3ey6ApMwiRsrJXDp3k1ndVGw2Dyv6wuc9gMv"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/oz-upgradeable/utils/ContextUpgradeable.sol": {
+        "keccak256": "0x8d195f4fb42b15464ab01ae3fb99b6f5c88526ae9b4187f0774741ad0dc6d3d2",
+        "urls": [
+          "bzz-raw://3a2c223fb1f1d38983f2c58d410032d20220b1050c1effbbfcac71e73da3e622",
+          "dweb:/ipfs/QmQ1da9VzJZc6bkN7hNUeMUm3JxNxDBvSTDkqSkrfAZZp2"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/oz/token/ERC20/extensions/draft-IERC20Permit.sol": {
+        "keccak256": "0x34105f424efc42408e888dea69590a54b6e58002c97901011bca87fe2489eee7",
+        "urls": [
+          "bzz-raw://f8b832080b30bbb476c96a237051c25aa508cb6fcd623415df87d9f83226fbfe",
+          "dweb:/ipfs/QmUqnoPTGMf9tWRGrPESEoh7kgWJcAFyfNWMFEVm5iggwZ"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/oz-custom/contracts/oz/utils/Create2.sol": {
+        "keccak256": "0x2cc3761bc38bff25ecd2a0d9e9083a3bad801070bf08114394e989399ee1a26f",
+        "urls": [
+          "bzz-raw://f755093521ab1533d2c1d04f9a0e63fa47f556590f39c20bef75c7fdc589bbe4",
+          "dweb:/ipfs/QmRr564LeDGmDV6GL7rTPTnzoHL5F5SFyXYHPV2zoeSHfb"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/IReceiveGateFactory.sol",
+    "id": 1923,
+    "exportedSymbols": {
+      "IERC20Permit": [
+        33384
+      ],
+      "IKillable": [
+        27574
+      ],
+      "IReceiveGate": [
+        1876
+      ],
+      "IReceiveGateFactory": [
+        1922
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:596:7",
+    "nodes": [
+      {
+        "id": 1878,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:7",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 1879,
+        "nodeType": "ImportDirective",
+        "src": "57:28:7",
+        "nodes": [],
+        "absolutePath": "contracts/interfaces/IReceiveGate.sol",
+        "file": "./IReceiveGate.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 1923,
+        "sourceUnit": 1877,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 1922,
+        "nodeType": "ContractDefinition",
+        "src": "87:540:7",
+        "nodes": [
+          {
+            "id": 1885,
+            "nodeType": "EventDefinition",
+            "src": "123:71:7",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "550beaf2eeba510eb33a6248a94d6bff07e1d03c9a0c53b1ee1b3649eb792a5b",
+            "name": "InstanceDeployed",
+            "nameLocation": "129:16:7",
+            "parameters": {
+              "id": 1884,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1881,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "instance",
+                  "nameLocation": "162:8:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1885,
+                  "src": "146:24:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1880,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "146:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1883,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "salt",
+                  "nameLocation": "188:4:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1885,
+                  "src": "172:20:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1882,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "172:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "145:48:7"
+            }
+          },
+          {
+            "id": 1887,
+            "nodeType": "EventDefinition",
+            "src": "199:25:7",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "45db7aa5335b3a902ce38730c91bb0309d0a4d5e5334f56cd1db215eb5d7ea2e",
+            "name": "InstanceReinited",
+            "nameLocation": "205:16:7",
+            "parameters": {
+              "id": 1886,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "221:2:7"
+            }
+          },
+          {
+            "id": 1889,
+            "nodeType": "EventDefinition",
+            "src": "229:26:7",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "b8f960c554393bf23f15b73d2e435274e1d464d063a075f64d30e6e013b146d8",
+            "name": "InstanceDestroyed",
+            "nameLocation": "235:17:7",
+            "parameters": {
+              "id": 1888,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "252:2:7"
+            }
+          },
+          {
+            "id": 1894,
+            "nodeType": "FunctionDefinition",
+            "src": "261:44:7",
+            "nodes": [],
+            "functionSelector": "9aacec3c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateSalt",
+            "nameLocation": "270:10:7",
+            "parameters": {
+              "id": 1892,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1891,
+                  "mutability": "mutable",
+                  "name": "salt_",
+                  "nameLocation": "289:5:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1894,
+                  "src": "281:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1890,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "281:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "280:15:7"
+            },
+            "returnParameters": {
+              "id": 1893,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "304:0:7"
+            },
+            "scope": 1922,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1906,
+            "nodeType": "FunctionDefinition",
+            "src": "311:137:7",
+            "nodes": [],
+            "functionSelector": "45f31ca6",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deploy",
+            "nameLocation": "320:6:7",
+            "parameters": {
+              "id": 1904,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1897,
+                  "mutability": "mutable",
+                  "name": "receiveGate_",
+                  "nameLocation": "349:12:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1906,
+                  "src": "336:25:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IReceiveGate_$1876",
+                    "typeString": "contract IReceiveGate"
+                  },
+                  "typeName": {
+                    "id": 1896,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 1895,
+                      "name": "IReceiveGate",
+                      "nameLocations": [
+                        "336:12:7"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 1876,
+                      "src": "336:12:7"
+                    },
+                    "referencedDeclaration": 1876,
+                    "src": "336:12:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IReceiveGate_$1876",
+                      "typeString": "contract IReceiveGate"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1900,
+                  "mutability": "mutable",
+                  "name": "tokens_",
+                  "nameLocation": "390:7:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1906,
+                  "src": "371:26:7",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1898,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "371:7:7",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 1899,
+                    "nodeType": "ArrayTypeName",
+                    "src": "371:9:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1903,
+                  "mutability": "mutable",
+                  "name": "statuses_",
+                  "nameLocation": "423:9:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1906,
+                  "src": "407:25:7",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bool_$dyn_calldata_ptr",
+                    "typeString": "bool[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1901,
+                      "name": "bool",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "407:4:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "id": 1902,
+                    "nodeType": "ArrayTypeName",
+                    "src": "407:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
+                      "typeString": "bool[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "326:112:7"
+            },
+            "returnParameters": {
+              "id": 1905,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "447:0:7"
+            },
+            "scope": 1922,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1909,
+            "nodeType": "FunctionDefinition",
+            "src": "454:28:7",
+            "nodes": [],
+            "functionSelector": "83197ef0",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "destroy",
+            "nameLocation": "463:7:7",
+            "parameters": {
+              "id": 1907,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "470:2:7"
+            },
+            "returnParameters": {
+              "id": 1908,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "481:0:7"
+            },
+            "scope": 1922,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1921,
+            "nodeType": "FunctionDefinition",
+            "src": "488:137:7",
+            "nodes": [],
+            "functionSelector": "81401957",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "reinit",
+            "nameLocation": "497:6:7",
+            "parameters": {
+              "id": 1919,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1912,
+                  "mutability": "mutable",
+                  "name": "receiveGate_",
+                  "nameLocation": "526:12:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1921,
+                  "src": "513:25:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IReceiveGate_$1876",
+                    "typeString": "contract IReceiveGate"
+                  },
+                  "typeName": {
+                    "id": 1911,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 1910,
+                      "name": "IReceiveGate",
+                      "nameLocations": [
+                        "513:12:7"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 1876,
+                      "src": "513:12:7"
+                    },
+                    "referencedDeclaration": 1876,
+                    "src": "513:12:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IReceiveGate_$1876",
+                      "typeString": "contract IReceiveGate"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1915,
+                  "mutability": "mutable",
+                  "name": "tokens_",
+                  "nameLocation": "567:7:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1921,
+                  "src": "548:26:7",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1913,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "548:7:7",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 1914,
+                    "nodeType": "ArrayTypeName",
+                    "src": "548:9:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1918,
+                  "mutability": "mutable",
+                  "name": "statuses_",
+                  "nameLocation": "600:9:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1921,
+                  "src": "584:25:7",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bool_$dyn_calldata_ptr",
+                    "typeString": "bool[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1916,
+                      "name": "bool",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "584:4:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "id": 1917,
+                    "nodeType": "ArrayTypeName",
+                    "src": "584:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
+                      "typeString": "bool[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "503:112:7"
+            },
+            "returnParameters": {
+              "id": 1920,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "624:0:7"
+            },
+            "scope": 1922,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IReceiveGateFactory",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          1922
+        ],
+        "name": "IReceiveGateFactory",
+        "nameLocation": "97:19:7",
+        "scope": 1923,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 7
+}

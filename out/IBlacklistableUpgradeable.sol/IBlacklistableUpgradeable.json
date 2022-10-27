@@ -1,0 +1,504 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Blacklisted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Whitelisted",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account_",
+          "type": "address"
+        }
+      ],
+      "name": "isBlacklisted",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account_",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "status",
+          "type": "bool"
+        }
+      ],
+      "name": "setUserStatus",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "isBlacklisted(address)": "fe575a87",
+    "setUserStatus(address,bool)": "21eceff7"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Blacklisted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Whitelisted\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account_\",\"type\":\"address\"}],\"name\":\"isBlacklisted\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account_\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"status\",\"type\":\"bool\"}],\"name\":\"setUserStatus\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/oz-custom/contracts/internal-upgradeable/interfaces/IBlacklistableUpgradeable.sol\":\"IBlacklistableUpgradeable\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":1000000},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":oz-custom/=node_modules/oz-custom/\"]},\"sources\":{\"node_modules/oz-custom/contracts/internal-upgradeable/interfaces/IBlacklistableUpgradeable.sol\":{\"keccak256\":\"0x61c99de459d92f0ea5bb317f0e1a8f3779a3f618a30da114dca71ffa83be5a77\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2944f830db8fc6cf6ece7bbaa5737bd2fb12660272248defa042106821ece3ce\",\"dweb:/ipfs/QmeocnrimuVLjo5WbNXjsLoZb79P5cx3E1U8h9zAGThjF3\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "account",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "Blacklisted",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "account",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "Whitelisted",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "account_",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isBlacklisted",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "account_",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "status",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setUserStatus"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=node_modules/hardhat/",
+        ":oz-custom/=node_modules/oz-custom/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 1000000
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "node_modules/oz-custom/contracts/internal-upgradeable/interfaces/IBlacklistableUpgradeable.sol": "IBlacklistableUpgradeable"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/oz-custom/contracts/internal-upgradeable/interfaces/IBlacklistableUpgradeable.sol": {
+        "keccak256": "0x61c99de459d92f0ea5bb317f0e1a8f3779a3f618a30da114dca71ffa83be5a77",
+        "urls": [
+          "bzz-raw://2944f830db8fc6cf6ece7bbaa5737bd2fb12660272248defa042106821ece3ce",
+          "dweb:/ipfs/QmeocnrimuVLjo5WbNXjsLoZb79P5cx3E1U8h9zAGThjF3"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/oz-custom/contracts/internal-upgradeable/interfaces/IBlacklistableUpgradeable.sol",
+    "id": 4327,
+    "exportedSymbols": {
+      "IBlacklistableUpgradeable": [
+        4326
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:307:24",
+    "nodes": [
+      {
+        "id": 4303,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:24",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 4326,
+        "nodeType": "ContractDefinition",
+        "src": "58:280:24",
+        "nodes": [
+          {
+            "id": 4307,
+            "nodeType": "EventDefinition",
+            "src": "100:43:24",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "ffa4e6181777692565cf28528fc88fd1516ea86b56da075235fa575af6a4b855",
+            "name": "Blacklisted",
+            "nameLocation": "106:11:24",
+            "parameters": {
+              "id": 4306,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4305,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "134:7:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4307,
+                  "src": "118:23:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4304,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "118:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "117:25:24"
+            }
+          },
+          {
+            "id": 4311,
+            "nodeType": "EventDefinition",
+            "src": "148:43:24",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "aab7954e9d246b167ef88aeddad35209ca2489d95a8aeb59e288d9b19fae5a54",
+            "name": "Whitelisted",
+            "nameLocation": "154:11:24",
+            "parameters": {
+              "id": 4310,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4309,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "182:7:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4311,
+                  "src": "166:23:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4308,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "166:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "165:25:24"
+            }
+          },
+          {
+            "id": 4318,
+            "nodeType": "FunctionDefinition",
+            "src": "197:63:24",
+            "nodes": [],
+            "functionSelector": "21eceff7",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setUserStatus",
+            "nameLocation": "206:13:24",
+            "parameters": {
+              "id": 4316,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4313,
+                  "mutability": "mutable",
+                  "name": "account_",
+                  "nameLocation": "228:8:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4318,
+                  "src": "220:16:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4312,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "220:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4315,
+                  "mutability": "mutable",
+                  "name": "status",
+                  "nameLocation": "243:6:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4318,
+                  "src": "238:11:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4314,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "238:4:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "219:31:24"
+            },
+            "returnParameters": {
+              "id": 4317,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "259:0:24"
+            },
+            "scope": 4326,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 4325,
+            "nodeType": "FunctionDefinition",
+            "src": "266:70:24",
+            "nodes": [],
+            "functionSelector": "fe575a87",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isBlacklisted",
+            "nameLocation": "275:13:24",
+            "parameters": {
+              "id": 4321,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4320,
+                  "mutability": "mutable",
+                  "name": "account_",
+                  "nameLocation": "297:8:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4325,
+                  "src": "289:16:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4319,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "289:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "288:18:24"
+            },
+            "returnParameters": {
+              "id": 4324,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4323,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4325,
+                  "src": "330:4:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4322,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "330:4:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "329:6:24"
+            },
+            "scope": 4326,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IBlacklistableUpgradeable",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          4326
+        ],
+        "name": "IBlacklistableUpgradeable",
+        "nameLocation": "68:25:24",
+        "scope": 4327,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 24
+}

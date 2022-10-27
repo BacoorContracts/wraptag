@@ -66,7 +66,7 @@ abstract contract BaseUpgradeable is ContextUpgradeable, UUPSUpgradeable {
         internal
         onlyInitializing
     {
-        if (role_ != 0) authority_.requestAccess(role_);
+        authority_.requestAccess(role_);
         __updateAuthority(authority_);
     }
 

@@ -1,0 +1,271 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "salt_",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "bytecode_",
+          "type": "bytes"
+        }
+      ],
+      "name": "deploy",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "deploy(uint256,bytes32,bytes)": "66cfa057"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount_\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"salt_\",\"type\":\"bytes32\"},{\"internalType\":\"bytes\",\"name\":\"bytecode_\",\"type\":\"bytes\"}],\"name\":\"deploy\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/IMultichainDeployer.sol\":\"IMultichainDeployer\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":1000000},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":oz-custom/=node_modules/oz-custom/\"]},\"sources\":{\"contracts/interfaces/IMultichainDeployer.sol\":{\"keccak256\":\"0x7634bc077f31b849155d3e3f5a060ba067aaacf2e8d19e94636119f009787ba9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://80e25d8c5996bfb8c9cb51361ed6724912f3c1fe80baf2cd7690bd0bd3eb443c\",\"dweb:/ipfs/QmcT5AzNa6P22gM2AQpY4N9t6NEAHeZWpzkGHn3zQH4Y5a\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "amount_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "salt_",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes",
+              "name": "bytecode_",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "deploy"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=node_modules/hardhat/",
+        ":oz-custom/=node_modules/oz-custom/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 1000000
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "contracts/interfaces/IMultichainDeployer.sol": "IMultichainDeployer"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/interfaces/IMultichainDeployer.sol": {
+        "keccak256": "0x7634bc077f31b849155d3e3f5a060ba067aaacf2e8d19e94636119f009787ba9",
+        "urls": [
+          "bzz-raw://80e25d8c5996bfb8c9cb51361ed6724912f3c1fe80baf2cd7690bd0bd3eb443c",
+          "dweb:/ipfs/QmcT5AzNa6P22gM2AQpY4N9t6NEAHeZWpzkGHn3zQH4Y5a"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/IMultichainDeployer.sol",
+    "id": 1894,
+    "exportedSymbols": {
+      "IMultichainDeployer": [
+        1893
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:155:7",
+    "nodes": [
+      {
+        "id": 1883,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:7",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 1893,
+        "nodeType": "ContractDefinition",
+        "src": "57:129:7",
+        "nodes": [
+          {
+            "id": 1892,
+            "nodeType": "FunctionDefinition",
+            "src": "93:91:7",
+            "nodes": [],
+            "functionSelector": "66cfa057",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deploy",
+            "nameLocation": "102:6:7",
+            "parameters": {
+              "id": 1890,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1885,
+                  "mutability": "mutable",
+                  "name": "amount_",
+                  "nameLocation": "117:7:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1892,
+                  "src": "109:15:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1884,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "109:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1887,
+                  "mutability": "mutable",
+                  "name": "salt_",
+                  "nameLocation": "134:5:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1892,
+                  "src": "126:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1886,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "126:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1889,
+                  "mutability": "mutable",
+                  "name": "bytecode_",
+                  "nameLocation": "156:9:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1892,
+                  "src": "141:24:7",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 1888,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "141:5:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "108:58:7"
+            },
+            "returnParameters": {
+              "id": 1891,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "183:0:7"
+            },
+            "scope": 1893,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMultichainDeployer",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          1893
+        ],
+        "name": "IMultichainDeployer",
+        "nameLocation": "67:19:7",
+        "scope": 1894,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 7
+}
